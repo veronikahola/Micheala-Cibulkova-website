@@ -3,7 +3,7 @@ body {
   color: #F5F6F4;
   margin: 0;
   position: relative;
-  background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
+  background: radial-gradient(circle at 44% 59%, #FFFFFF 0%, #F5F6F4 21%, #F5F6F4 21%, #F5F6F4 75%, #EBEDE9 100%);
 }
 
 body::after {
@@ -25,9 +25,6 @@ p {
 .background--brown {
   background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
 }
-.background--white {
-  background: radial-gradient(circle at 44% 59%, #470707 0%, #F5F6F4 21%, #F5F6F4 21%, #F5F6F4 75%, #EBEDE9 100%);
-}
 
 .menu {
   display: grid;
@@ -36,9 +33,19 @@ p {
   padding: 40px;
   gap: 20px;
 }
+.menu-dark {
+  background: linear-gradient(to top, #78686C, #625559);
+  padding-bottom: 0;
+}
 @media screen and (min-width: 768px) {
   .menu {
     padding-bottom: 80px;
+    background: transparent;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__wave {
+    display: none;
   }
 }
 .menu__checkbox {
@@ -107,6 +114,15 @@ p {
 .menu__item:last-child {
   border: none;
 }
+.menu__item--dark {
+  color: #78686C;
+  color: #F5F6F4;
+}
+@media screen and (min-width: 768px) {
+  .menu__item--dark {
+    color: #78686C;
+  }
+}
 @media screen and (max-width: 768px) {
   .menu__item:hover {
     background-color: #F5F6F4;
@@ -145,6 +161,9 @@ p {
 .menu__logo:hover {
   animation: changeColor 3s infinite;
 }
+.menu__logo--dark:hover {
+  animation: changeColorDark 3s infinite;
+}
 @media screen and (max-width: 768px) {
   .menu__logo {
     display: none;
@@ -165,6 +184,20 @@ p {
   }
   66% {
     color: #F5F6F4;
+  }
+  100% {
+    color: #F6BE65;
+  }
+}
+@keyframes changeColorDark {
+  0% {
+    color: #78686C;
+  }
+  33% {
+    color: #BB8B9E;
+  }
+  66% {
+    color: #78686C;
   }
   100% {
     color: #F6BE65;
@@ -304,4 +337,49 @@ p {
 
 .landing {
   min-height: 100vh;
+}
+
+.footer {
+  padding: 0;
+  background: linear-gradient(to bottom, #78686C, #625559);
+  max-height: 30vh;
+}
+.footer__wave {
+  filter: url(#shadow);
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  position: relative;
+  margin-top: -8px;
+  z-index: 1;
+}
+.footer__icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: end;
+  align-self: end;
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+.footer__img {
+  height: 20vh;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.footer__text {
+  font-family: "Reenie Beanie", cursive;
+  color: #F5F6F4;
+  font-size: 30px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  justify-self: start;
+  align-self: end;
+  padding: 0 0 20px 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -8,9 +8,21 @@
     padding: var.$spacer-m;
     gap: var.$spacer-s;
 
+    &-dark {
+        background: linear-gradient(to top, #78686C, #625559);
+        padding-bottom: 0;
+    }
+
 
     @media screen and (min-width: 768px) {
         padding-bottom: var.$spacer-l;
+        background: transparent;
+    }
+
+    &__wave {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
     
     
@@ -85,6 +97,15 @@
         &:last-child {
             border: none;
         }
+
+        &--dark {
+            color: var.$color-brown;
+            color: var.$color-white;
+
+            @media screen and (min-width: 768px) {
+                color: var.$color-brown;
+            }
+        }
         
 
         @media screen and (max-width: 768px) {
@@ -129,6 +150,10 @@
         &:hover {
             animation: changeColor 3s infinite;
         }
+
+        &--dark:hover {
+            animation: changeColorDark 3s infinite;
+        }
         
         @media screen and (max-width: 768px) {
             display: none;
@@ -147,6 +172,13 @@
     0% { color: var.$color-white; } 
     33% { color: var.$color-second; } 
     66% { color: var.$color-white; } 
+    100% { color: var.$color-first; }
+}
+
+@keyframes changeColorDark {
+    0% { color: var.$color-brown; } 
+    33% { color: var.$color-second; } 
+    66% { color: var.$color-brown; } 
     100% { color: var.$color-first; }
 }
 
