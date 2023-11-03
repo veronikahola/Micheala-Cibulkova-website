@@ -1,0 +1,81 @@
+@use "var";
+
+.omne {
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+
+        padding: 0 var.$spacer-s var.$spacer-s var.$spacer-s;
+        margin: 0 auto;
+        margin-top: -8px;
+        max-width: 1100px;
+        text-align: center;
+        
+        
+        @media screen and (min-width: 768px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            padding-bottom: 0;
+        }
+
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 80%;
+        border: 6px solid var.$color-light;
+        margin-bottom: var.$spacer-m;
+        transition: transform 0.4s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (min-width: 768px){
+            grid-column: 2/3;
+            grid-row: 1/2;
+            border: 8px solid var.$color-light;
+            margin: 0;
+
+            &--reverse {
+                grid-column: 1/2;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 100%;
+        text-align: justify;
+
+        @media screen and (min-width: 768px){
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding: var.$spacer-m;
+
+            &--reverse {
+                grid-column: 2/3;
+            }
+        }
+    }
+
+
+    &__wave {
+        filter: url(#shadow-omne);
+    }
+
+
+    &--dark {
+        background-image: linear-gradient(to bottom, #574C4F, #78686C);
+        padding-bottom: var.$spacer-l;
+
+        @media screen and (min-width: 768px){
+            padding-bottom: var.$spacer-xl;
+        }
+    }
+    
+
+   
+}

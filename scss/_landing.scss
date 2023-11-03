@@ -126,12 +126,6 @@
         }
     }
 
-
-    &__img {
-        filter: url(#shadow);
-    }
-
-
     &__text {
         background-image: linear-gradient(to top, #C398A9,  var.$color-second);
         // background-color: var.$color-second;

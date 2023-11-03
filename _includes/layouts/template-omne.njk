@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body class="background--white">
+    
+    <!-- vložení headeru -->
+    {% include "partials/header.njk" %}
+
+
+
+    <!-- místo pro obsah -->
+    {{ content | safe }}
+
+
+
+
+    <!-- vložení footeru -->
+    {% include "partials/footer-omne.njk" %} 
+
+</body>
+
+
+
+</html>

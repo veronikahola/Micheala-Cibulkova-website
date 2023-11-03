@@ -9,20 +9,23 @@
     gap: var.$spacer-s;
 
     &-dark {
-        background: linear-gradient(to top, #78686C, #625559);
+        background: linear-gradient(to top, #78686C, #574C4F);
         padding-bottom: 0;
     }
 
 
     @media screen and (min-width: 768px) {
         padding-bottom: var.$spacer-l;
+        padding-top: var.$spacer-l;
         background: transparent;
     }
 
     &__wave {
+        filter: url(#shadow-header);
         @media screen and (min-width: 768px) {
             display: none;
         }
+
     }
     
     
@@ -46,8 +49,8 @@
         font-size: var.$font-size-m;
         grid-column: 1/2;
         grid-row: 1/2;
-        justify-items: start;
-        align-items: end;
+        justify-self: start;
+        align-self: end;
         margin: 0;
 
         @media screen and (min-width: 768px) {

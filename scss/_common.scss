@@ -27,29 +27,94 @@ p {
     margin: 0;
 }
 
-.background {
-    // position: relative;
+.hidden__img {
+    filter: url(#shadow);
+}
 
-    &--brown {
-        background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
+.plain-text {
+    color: var.$color-brown;
+    font-size: var.$font-size-xs;
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px){
+        font-size: var.$font-size-s;
+    }
+
+    &--small {
+        @media screen and (min-width: 768px){
+            font-size: var.$font-size-xs;
+        }
+    }
+
+    &--light {
+        color: var.$color-light;
+        text-decoration: none;
+
+        &:hover {
+            color: var.$color-second;
+        }
+    }
+
+    &--white {
+        color: var.$color-white;
+    }
+}
+
+.pink {
+    color: var.$color-second;
+}
+
+.yellow {
+    color: var.$color-first;
+}
+
+.green {
+    color: var.$color-third;
+}
+
+.callout {
+    font-family: var.$font-heading;
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 0.5;
+
+    @media screen and (min-width: 768px){
+        font-size: var.$font-size-m;
+    }
+}
+
+
+.heading {
+    font-family: var.$font-heading;
+    font-size: var.$font-size-l;
+    color: var.$color-brown;
+    letter-spacing: 2px;
+    line-height: 0.5;
+    margin: 0;
+
+    @media screen and (min-width: 768px){
+        font-size: var.$font-size-xl;
+    }
+
+    &--small {
+        font-size: var.$font-size-m;
+
+        @media screen and (min-width: 768px){
+            font-size: var.$font-size-l;
+        }
+    }
+
+    &--white {
+        color: var.$color-white;
     }
 }
 
 
 
-
-// .background::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-image: url(https://grainy-gradients.vercel.app/noise.svg);
-//     opacity: 30%;
-//     pointer-events: none;
-// }
-
-
+.background {
+    &--brown {
+        background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
+    }
+}
 
 

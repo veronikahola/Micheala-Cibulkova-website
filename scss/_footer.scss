@@ -8,10 +8,6 @@
     background: linear-gradient(to bottom, #78686C, #625559);
     max-height: 30vh;
 
-    &__wave {
-        filter: url(#shadow);
-    }
-
 
     &__content {
         display: grid;
@@ -21,9 +17,6 @@
         position: relative;
         margin-top: -8px;
         z-index: 1;
-
-        
-        
     }
 
     &__icons {
