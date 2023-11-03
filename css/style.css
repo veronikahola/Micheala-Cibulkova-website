@@ -105,6 +105,13 @@ p {
   background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
 }
 
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 20px;
+}
+
 .menu {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -481,13 +488,13 @@ p {
 }
 .omne__img {
   border-radius: 50%;
-  width: 80%;
+  width: 75%;
   border: 6px solid #B3A8A8;
   margin-bottom: 40px;
   transition: transform 0.4s;
 }
-.omne__img:hover {
-  transform: scale(1.1);
+.omne__img--reverse {
+  margin-top: 20px;
 }
 @media screen and (min-width: 768px) {
   .omne__img {
@@ -496,8 +503,12 @@ p {
     border: 8px solid #B3A8A8;
     margin: 0;
   }
+  .omne__img:hover {
+    transform: scale(0.95);
+  }
   .omne__img--reverse {
     grid-column: 1/2;
+    margin-top: 0;
   }
 }
 .omne__text {
@@ -509,6 +520,7 @@ p {
     grid-column: 1/2;
     grid-row: 1/2;
     padding: 40px;
+    padding-bottom: 0;
   }
   .omne__text--reverse {
     grid-column: 2/3;
@@ -525,4 +537,141 @@ p {
   .omne--dark {
     padding-bottom: 120px;
   }
+}
+
+dfn {
+  cursor: help;
+  font-style: normal;
+  position: relative;
+}
+
+dfn::after {
+  content: attr(data-info);
+  display: inline;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  opacity: 0;
+  width: 230px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 0.5em 0.8em;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  pointer-events: none; /* This prevents the box from apearing when hovered. */
+  transition: opacity 250ms, top 250ms;
+}
+
+dfn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border: solid transparent 5px;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 250ms, top 250ms;
+}
+
+dfn:hover {
+  z-index: 2;
+} /* Keeps the info boxes on top of other elements */
+dfn:hover::after,
+dfn:hover::before {
+  opacity: 1;
+}
+
+dfn:hover::after {
+  top: 30px;
+}
+
+dfn:hover::before {
+  top: 20px;
+}
+
+.form {
+  width: 100%;
+  text-align: justify;
+}
+.form__field {
+  margin-bottom: 12px;
+  font-size: 16px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .form__field-flex {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 12px;
+  }
+}
+.form__field:hover .form__label, .form__field:focus .form__label {
+  transform: translateY(-10px);
+}
+.form__field:hover .form__input {
+  border-color: #78686C;
+}
+.form__field > .form__input:focus + .form__label {
+  transform: translateY(-10px);
+}
+.form__field > .form__input:focus {
+  border-color: #78686C;
+  outline-style: none;
+}
+.form__field > .form__input:not(:-moz-placeholder-shown) + .form__label {
+  transform: translateY(-10px);
+}
+.form__field > .form__input:not(:placeholder-shown) + .form__label {
+  transform: translateY(-10px);
+}
+.form__label {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  padding-left: 12px;
+  margin-top: -12px;
+  color: #B3A8A8;
+  font-size: 12px;
+  transition: 0.2s;
+}
+.form__label--textarea {
+  top: 13%;
+}
+.form__input {
+  border: 1px solid #B3A8A8;
+  border-radius: 10px;
+  padding: 30px 0 12px 12px;
+  background-color: transparent;
+  color: #78686C;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .form__input {
+    font-size: 16px;
+  }
+}
+
+button {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Reenie Beanie", cursive;
+  color: #BB8B9E;
+  letter-spacing: 2px;
+  background-color: transparent;
+  display: block;
+  margin: 20px auto 0 auto;
+  border: none;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
 }/*# sourceMappingURL=style.css.map */

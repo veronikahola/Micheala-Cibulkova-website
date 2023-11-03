@@ -25,13 +25,14 @@
 
     &__img {
         border-radius: 50%;
-        width: 80%;
+        width: 75%;
         border: 6px solid var.$color-light;
         margin-bottom: var.$spacer-m;
         transition: transform 0.4s;
+        
 
-        &:hover {
-            transform: scale(1.1);
+        &--reverse {
+            margin-top: var.$spacer-s;
         }
 
         @media screen and (min-width: 768px){
@@ -40,8 +41,13 @@
             border: 8px solid var.$color-light;
             margin: 0;
 
+            &:hover {
+                transform: scale(0.95);
+            }
+
             &--reverse {
                 grid-column: 1/2;
+                margin-top: 0;
             }
         }
     }
@@ -54,6 +60,7 @@
             grid-column: 1/2;
             grid-row: 1/2;
             padding: var.$spacer-m;
+            padding-bottom: 0;
 
             &--reverse {
                 grid-column: 2/3;
@@ -79,3 +86,47 @@
 
    
 }
+
+
+
+
+// možná???
+
+dfn {
+    cursor: help;
+    font-style: normal;
+    position: relative;
+    
+  }
+  dfn::after {
+    content: attr(data-info);
+    display: inline;
+    position: absolute;
+    top: 22px; left: 0;
+    opacity: 0;
+    width: 230px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0.5em 0.8em;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    pointer-events: none; /* This prevents the box from apearing when hovered. */
+    transition: opacity 250ms, top 250ms;
+  }
+  dfn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px; left: 20px;
+    opacity: 0;
+    width: 0; height: 0;
+    border: solid transparent 5px;
+    border-bottom-color: rgba(0,0,0,0.8);
+    transition: opacity 250ms, top 250ms;
+  }
+  dfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */
+  dfn:hover::after,
+  dfn:hover::before {opacity: 1;}
+  dfn:hover::after {top: 30px;}
+  dfn:hover::before {top: 20px;}

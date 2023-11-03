@@ -1,0 +1,98 @@
+@use 'var';
+
+.form {
+    width: 100%;
+    text-align: justify;
+
+    &__field {
+        margin-bottom: var.$spacer-xs;
+        font-size: var.$font-size-s;
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        &-flex {
+            @media screen and (min-width: 768px){
+                display: flex;
+                flex: 1 1 auto;
+                gap: var.$spacer-xs;
+            }
+        }
+
+        &:hover .form__label,
+        &:focus .form__label {
+            transform: translateY(-10px);
+        }
+
+        &:hover .form__input {
+            border-color: var.$color-brown;
+        }
+
+        & > .form__input:focus + .form__label {
+            transform: translateY(-10px);
+        }
+
+        & > .form__input:focus {
+            border-color: var.$color-brown;
+            outline-style: none;
+        }
+
+        & > .form__input:not(:placeholder-shown) + .form__label {
+            transform: translateY(-10px);
+            }
+    }
+
+    &__label {
+        display: block;
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+
+        padding-left: var.$spacer-xs;
+        margin-top: - var.$spacer-xs;
+        color: var.$color-light;
+        font-size: var.$font-size-xs;
+        transition: .2s;
+
+        &--textarea {
+            top: 13%;
+        }
+    }
+
+    &__input {
+        border: 1px solid var.$color-light;
+        border-radius: 10px;
+        padding: 30px 0 var.$spacer-xs var.$spacer-xs;
+        background-color: transparent;
+
+        color: var.$color-brown;
+        font-family: var.$font-main;
+        font-size: var.$font-size-xs;
+
+        @media screen and (min-width: 768px){
+            font-size: var.$font-size-s;
+        }
+    }
+}
+
+button {
+    text-decoration: none;
+    font-size: var.$font-size-m;
+    font-family: var.$font-logo;
+    color: var.$color-second;
+    letter-spacing: 2px;
+    background-color: transparent;
+    display: block;
+    margin: var.$spacer-s auto 0 auto;
+    
+    border: none;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+
+
+}
