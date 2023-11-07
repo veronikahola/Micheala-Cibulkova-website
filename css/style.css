@@ -315,6 +315,8 @@ p {
 }
 .banner {
   text-align: center;
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -709,6 +711,7 @@ button {
   color: #B3A8A8;
   font-size: 30px;
   padding: 0 40px;
+  cursor: pointer;
 }
 .toggle__text--psi {
   color: #685B5E;
@@ -733,6 +736,7 @@ button {
   left: 60px;
   transform: translate(-50%, -50%);
   transition: left 1s;
+  cursor: pointer;
 }
 
 .gallery {

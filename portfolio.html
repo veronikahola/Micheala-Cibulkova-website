@@ -13,6 +13,8 @@ title: Portfolio
         const galleryPsi = document.querySelector('.gallery--psi');
         const galleryLide = document.querySelector('.gallery--lide');
 
+        
+
         toggleCheckbox.addEventListener('change', function() {
             if (this.checked) {
                 toggleTextPsi.style.transition = 'color 0.5s';
@@ -32,6 +34,17 @@ title: Portfolio
                 galleryLide.style.display = 'none';
             }
         });
+
+        toggleTextPsi.addEventListener('click', function() {
+            toggleCheckbox.checked = false;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+
+        toggleTextLide.addEventListener('click', function() {
+            toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+        
     });
 </script>
 

@@ -117,6 +117,7 @@ button {
         color: var.$color-light;
         font-size: var.$font-size-m;
         padding: 0 var.$spacer-m;
+        cursor: pointer;
 
         &--psi {
             color: var.$color-brown;
@@ -129,6 +130,7 @@ button {
         height: 8px;
         background-color: #D9D9D9;
         border-radius: 5px;
+        
     }
 
     &__checkbox {
@@ -147,6 +149,7 @@ button {
         left: 60px;
         transform: translate(-50%, -50%);
         transition: left 1s;
+        cursor: pointer;
     }
 }
 
