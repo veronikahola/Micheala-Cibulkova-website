@@ -58,6 +58,10 @@ p {
     &--white {
         color: var.$color-white;
     }
+
+    &--center {
+        text-align: center;
+    }
 }
 
 .pink {
@@ -107,6 +111,20 @@ p {
     &--white {
         color: var.$color-white;
     }
+
+    &--hidden {
+        @media screen and (min-width: 768px){
+            display: none;
+        }
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--margin {
+        margin-top: var.$spacer-m;
+    }
 }
 
 
@@ -123,5 +141,14 @@ p {
     margin: 0 auto;
     text-align: justify;
     padding: var.$spacer-s;
+
+    &--gallery {
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: justify;
+        padding: var.$spacer-s;
+    }
 }
+
+
 

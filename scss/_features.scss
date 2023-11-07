@@ -96,3 +96,65 @@ button {
 
 
 }
+
+
+
+
+// toggle
+.toggle {
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        margin: var.$spacer-m auto;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-family: var.$font-heading;
+        color: var.$color-light;
+        font-size: var.$font-size-m;
+        padding: 0 var.$spacer-m;
+
+        &--psi {
+            color: var.$color-brown;
+        }
+    }
+
+    &__switch {
+        position: relative;
+        width: 200px;
+        height: 8px;
+        background-color: #D9D9D9;
+        border-radius: 5px;
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .toggle__label .toggle__slider {
+            left: calc(100% - 55px);
+            transition: 1s;
+            
+          }
+    }
+
+    &__slider {
+        position: absolute;
+        top: 5px;
+        left: 60px;
+        transform: translate(-50%, -50%);
+        transition: left 1s;
+    }
+}
+
+
+
+
+
+  
+  
+
+

@@ -1,0 +1,43 @@
+@use 'var';
+
+.gallery {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+    padding: var.$spacer-s;
+    margin-bottom: var.$spacer-l;
+
+
+    @media screen and (min-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: 1fr;
+        // grid-auto-flow: dense;
+        gap: 4px;
+    }
+
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        // padding-bottom: 2px;
+
+
+        &:nth-child(2n) {
+            grid-row: span 2;
+        }
+    }
+}
+
+.self {
+    align-self: end;
+}
+
+
+.gallery--lide {
+    display: none;
+}
