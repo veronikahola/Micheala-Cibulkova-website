@@ -6,6 +6,7 @@ title: Portfolio
 <!-- změna barvy textu a display gallerie -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        const toggleContainer = document.querySelector('.toggle__container'); 
         const toggleCheckbox = document.querySelector('.toggle__checkbox');
         const toggleTextPsi = document.querySelector('.toggle__text--psi');
         const toggleTextLide = document.querySelector('.toggle__text--lide');
@@ -13,21 +14,14 @@ title: Portfolio
         const galleryPsi = document.querySelector('.gallery--psi');
         const galleryLide = document.querySelector('.gallery--lide');
 
-        // toto je swipování
-        let startX = 0;
-
-        toggleContainer.addEventListener('touchstart', function(event) {
-            startX = event.touches[0].clientX;
+        hammer.on('swipeleft', function() {
+            toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
         });
 
-        toggleContainer.addEventListener('touchend', function(event) {
-            const endX = event.changedTouches[0].clientX;
-            const deltaX = endX - startX;
-
-            if (Math.abs(deltaX) > 50) {
-                toggleCheckbox.checked = deltaX < 0 ? true : false;
-                toggleCheckbox.dispatchEvent(new Event('change'));
-            }
+        hammer.on('swiperight', function() {
+            toggleCheckbox.checked = false;
+            toggleCheckbox.dispatchEvent(new Event('change'));
         });
 
         toggleCheckbox.addEventListener('change', function() {
