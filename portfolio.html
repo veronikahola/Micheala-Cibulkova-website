@@ -14,15 +14,7 @@ title: Portfolio
         const galleryPsi = document.querySelector('.gallery--psi');
         const galleryLide = document.querySelector('.gallery--lide');
 
-        hammer.on('swipeleft', function() {
-            toggleCheckbox.checked = true;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-        hammer.on('swiperight', function() {
-            toggleCheckbox.checked = false;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
+       
 
         toggleCheckbox.addEventListener('change', function() {
             if (this.checked) {
@@ -51,6 +43,17 @@ title: Portfolio
 
         toggleTextLide.addEventListener('click', function() {
             toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+
+
+        hammer.on('swipeleft', function() {
+            toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+
+        hammer.on('swiperight', function() {
+            toggleCheckbox.checked = false;
             toggleCheckbox.dispatchEvent(new Event('change'));
         });
         
