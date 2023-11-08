@@ -13,7 +13,22 @@ title: Portfolio
         const galleryPsi = document.querySelector('.gallery--psi');
         const galleryLide = document.querySelector('.gallery--lide');
 
-        
+        // toto je swipování
+        let startX = 0;
+
+        toggleContainer.addEventListener('touchstart', function(event) {
+            startX = event.touches[0].clientX;
+        });
+
+        toggleContainer.addEventListener('touchend', function(event) {
+            const endX = event.changedTouches[0].clientX;
+            const deltaX = endX - startX;
+
+            if (Math.abs(deltaX) > 50) {
+                toggleCheckbox.checked = deltaX < 0 ? true : false;
+                toggleCheckbox.dispatchEvent(new Event('change'));
+            }
+        });
 
         toggleCheckbox.addEventListener('change', function() {
             if (this.checked) {

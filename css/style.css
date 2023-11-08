@@ -701,7 +701,7 @@ button {
 .toggle__container {
   position: relative;
   z-index: 1;
-  margin: 40px auto;
+  margin: 40px auto 80px auto;
   max-width: 400px;
   display: flex;
   align-items: center;
