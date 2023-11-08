@@ -6,7 +6,6 @@ title: Portfolio
 <!-- změna barvy textu a display gallerie -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const toggleContainer = document.querySelector('.toggle__container'); 
         const toggleCheckbox = document.querySelector('.toggle__checkbox');
         const toggleTextPsi = document.querySelector('.toggle__text--psi');
         const toggleTextLide = document.querySelector('.toggle__text--lide');
@@ -14,7 +13,7 @@ title: Portfolio
         const galleryPsi = document.querySelector('.gallery--psi');
         const galleryLide = document.querySelector('.gallery--lide');
 
-       
+        
 
         toggleCheckbox.addEventListener('change', function() {
             if (this.checked) {
@@ -43,17 +42,6 @@ title: Portfolio
 
         toggleTextLide.addEventListener('click', function() {
             toggleCheckbox.checked = true;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-
-        hammer.on('swipeleft', function() {
-            toggleCheckbox.checked = true;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-        hammer.on('swiperight', function() {
-            toggleCheckbox.checked = false;
             toggleCheckbox.dispatchEvent(new Event('change'));
         });
         
@@ -107,28 +95,66 @@ title: Portfolio
 </section>
 
 
-
 <!-- galerie psi -->
 <section class="gallery gallery--psi">
-    <img class="gallery__img" src="/images/portfolioPsi/img1.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img2.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img3.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img4.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img5.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img6.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img7.jpg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioPsi/img8.jpg" alt="galerie">
-</section>
 
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img1.jpg"><img class="gallery__img" src="/images/portfolioPsi/img1.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img2.jpg"><img class="gallery__img" src="/images/portfolioPsi/img2.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img3.jpg"><img class="gallery__img" src="/images/portfolioPsi/img3.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img4.jpg"><img class="gallery__img" src="/images/portfolioPsi/img4.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img5.jpg"><img class="gallery__img" src="/images/portfolioPsi/img5.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img6.jpg"><img class="gallery__img" src="/images/portfolioPsi/img6.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img7.jpg"><img class="gallery__img" src="/images/portfolioPsi/img7.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/nahledy/img8.jpg"><img class="gallery__img" src="/images/portfolioPsi/img8.jpg" alt="galerie"></a>
+    </div>
+
+</section>
 
 
 <!-- galerie lide -->
 <section class="gallery gallery--lide">
-    <img class="gallery__img" src="/images/portfolioLide/img1.jpeg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioLide/img2.jpeg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioLide/img3.jpeg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioLide/img4.jpeg" alt="galerie">
-    <img class="gallery__img" src="/images/portfolioLide/img5.jpeg" alt="galerie">
+
+    <div class="gallery__container">
+        <a data-fslightbox="second-lightbox" href="/images/portfolioLide/nahledy/img1.jpg"><img class="gallery__img" src="/images/portfolioLide/img1.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="second-lightbox" href="/images/portfolioLide/nahledy/img2.jpg"><img class="gallery__img" src="/images/portfolioLide/img2.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="second-lightbox" href="/images/portfolioLide/nahledy/img3.jpg"><img class="gallery__img" src="/images/portfolioLide/img3.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="second-lightbox" href="/images/portfolioLide/nahledy/img4.jpg"><img class="gallery__img" src="/images/portfolioLide/img4.jpg" alt="galerie"></a>
+    </div>
+
+    <div class="gallery__container">
+        <a data-fslightbox="second-lightbox" href="/images/portfolioLide/nahledy/img5.jpg"><img class="gallery__img" src="/images/portfolioLide/img5.jpg" alt="galerie"></a>
+    </div>
 </section>
 
 
@@ -143,3 +169,16 @@ title: Portfolio
 </div>
 
 
+
+
+<script src="/fslightbox.js"></script>
+
+<script src="fslightbox.min.js"></script>
+<script>
+fsLightboxInstances["first-lightbox"].props.onOpen = function () {
+	console.log("The first lightbox has opened.");
+}
+fsLightboxInstances["second-lightbox"].props.onOpen = function () {
+	console.log("The second lightbox has opened.");
+}
+</script>

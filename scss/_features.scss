@@ -106,10 +106,14 @@ button {
     &__container {
         position: relative;
         z-index: 1;
-        margin: var.$spacer-m auto var.$spacer-l auto;
+        margin: var.$spacer-l auto var.$spacer-m auto;
         max-width: 400px;
         display: flex;
         align-items: center;
+
+        @media screen and (min-width: 768px){
+            margin: var.$spacer-l auto;
+        }
     }
 
     &__text {
