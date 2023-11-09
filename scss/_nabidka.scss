@@ -1,0 +1,92 @@
+@use 'var';
+
+
+.background {
+    margin-top: -8px;
+    margin-bottom: -2px;
+    padding-bottom: var.$spacer-m;
+
+    &--psi {
+    background-image: linear-gradient(to bottom, #808D68, #7E8D68);
+    }
+
+    &--lide {
+        background-image: linear-gradient(to bottom, #BB8B9E, #C398A9);
+    }
+}
+
+
+
+.nabidka {
+    margin-top: var.$spacer-m;
+
+    @media screen and (min-width: 768px){
+        margin-top: 0;
+    }
+
+    &--lide {
+        display: none;
+    }
+
+    &__button {
+        text-decoration: none;
+        font-size: var.$font-size-l;
+        font-family: var.$font-logo;
+        color: var.$color-white;
+        letter-spacing: 2px;
+    }
+
+    &PsiTop {
+        filter: url(#shadow-nabidkaPsiTop);
+    }
+
+    &PsiBottom {
+        filter: url(#shadow-nabidkaPsiBottom);
+    }
+
+    &LideTop {
+        filter: url(#shadow-nabidkaLideTop);
+    }
+
+    &LideBottom {
+        filter: url(#shadow-nabidkaLideBottom);
+    }   
+}
+
+
+
+.glide {
+    margin-bottom: var.$spacer-s;
+    padding-top: var.$spacer-s;
+
+    @media screen and (min-width: 768px){
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+    &__slide {
+        padding: var.$spacer-m;
+        background-color: var.$color-white;
+        margin-bottom: 90px;
+        border-radius: 10px;
+        box-shadow: inset 0 0 3px var.$color-light;
+        text-align: justify;
+
+        &--side {
+            margin-top: var.$spacer-m;
+        }
+    }
+
+    &__bullets--hidden {
+        @media screen and (min-width: 768px){
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+

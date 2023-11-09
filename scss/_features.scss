@@ -93,8 +93,6 @@ button {
     
     border: none;
     transition: opacity 150ms ease, border 300ms ease-in-out;
-
-
 }
 
 
@@ -113,6 +111,10 @@ button {
 
         @media screen and (min-width: 768px){
             margin: var.$spacer-l auto;
+        }
+
+        &--nabidka {
+            margin-bottom: 0;
         }
     }
 

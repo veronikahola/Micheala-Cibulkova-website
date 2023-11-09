@@ -2,3 +2,296 @@
 layout: layouts/main-template.njk
 title: Nabídka
 ---
+
+
+<!-- změna barvy textu a display gallerie -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleCheckbox = document.querySelector('.toggle__checkbox');
+        const toggleTextPsi = document.querySelector('.toggle__text--psi');
+        const toggleTextLide = document.querySelector('.toggle__text--lide');
+
+        const nabidkaPsi = document.querySelector('.nabidka--psi');
+        const nabidkaLide = document.querySelector('.nabidka--lide');
+
+        
+
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                toggleTextPsi.style.transition = 'color 0.5s';
+                toggleTextLide.style.transition = 'color 0.5s';
+            
+                toggleTextPsi.style.color = '#B3A8A8';
+                toggleTextLide.style.color = '#685B5E';
+                nabidkaPsi.style.display = 'none';
+                nabidkaLide.style.display = 'grid';
+            } else {
+                toggleTextPsi.style.transition = 'color 0.5s';
+                toggleTextLide.style.transition = 'color 0.5s';
+                
+                toggleTextPsi.style.color = '#685B5E';
+                toggleTextLide.style.color = '#B3A8A8';
+                nabidkaPsi.style.display = 'grid';
+                nabidkaLide.style.display = 'none';
+            }
+        });
+
+        toggleTextPsi.addEventListener('click', function() {
+            toggleCheckbox.checked = false;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+
+        toggleTextLide.addEventListener('click', function() {
+            toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+        
+    });
+</script>
+
+
+
+
+
+
+
+<!-- úvodní text -->
+<div class="wrapper">
+    <h1 class="heading heading--hidden">nabídka </h1>
+    <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- toggle -->
+<section class="toggle__container toggle__container--nabidka">
+    <div class="toggle__text toggle__text--psi">psi</div>
+
+    <div class="toggle__switch">
+        <input type="checkbox" class="toggle__checkbox" id="toggle">
+        <label class="toggle__label" for="toggle">
+          <div class="toggle__slider">
+            <svg width="89" height="63" viewBox="0 0 89 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.2777 13.3127C11.8628 12.0503 11.5544 4.38776 11.8893 3.66363C12.2241 2.93949 18.36 2.33722 18.7663 3.38681C19.1725 4.4364 19.4301 11.5325 19.1547 13.0359C18.8792 14.5393 12.6925 14.5752 12.2777 13.3127Z" fill="#D9D9D9"/>
+                <path d="M11.525 13.5834C11.0413 12.6189 10.8041 6.72463 11.2263 6.16097C11.6485 5.59732 19.1544 5.02189 19.6315 5.82264C20.1086 6.62339 20.2941 12.0824 19.9303 13.245C19.5664 14.4076 12.0088 14.5478 11.525 13.5834Z" fill="#D9D9D9"/>
+                <path d="M5.73103 57.0708C1.27647 51.0608 -0.215933 13.985 3.85172 10.3827C7.91937 6.78043 79.0267 2.19908 83.4395 7.17912C87.8524 12.1592 88.9109 46.5017 85.3188 53.8671C81.7268 61.2326 10.1856 63.0807 5.73103 57.0708Z" fill="#D9D9D9"/>
+                <path d="M2.28624 41.9197C1.47393 37.8262 1.22435 31.647 1.40961 28.201C1.59487 24.755 86.7375 22.7032 86.8343 25.1062C86.931 27.5091 87.2765 36.0916 86.7676 39.5506C86.2587 43.0096 3.09855 46.0132 2.28624 41.9197Z" fill="#D9D9D9"/>
+                <path d="M2.36897 43.9795C1.55666 39.886 1.30709 33.7069 1.49235 30.2608C1.6776 26.8148 86.8203 24.763 86.917 27.166C87.0137 29.569 87.3592 38.1514 86.8503 41.6104C86.3414 45.0694 3.18128 48.073 2.36897 43.9795Z" fill="#D9D9D9"/>
+                <ellipse cx="44.04" cy="32.674" rx="15.2181" ry="16.1479" transform="rotate(-2.30505 44.04 32.674)" fill="#D9D9D9"/>
+                <ellipse cx="43.3653" cy="32.0135" rx="14.5705" ry="15.4608" transform="rotate(-2.30505 43.3653 32.0135)" fill="#D9D9D9"/>
+                <ellipse cx="43.7023" cy="32.3439" rx="13.5992" ry="14.43" transform="rotate(-2.30505 43.7023 32.3439)" fill="#D9D9D9"/>
+                <ellipse cx="43.7024" cy="32.3436" rx="10.3613" ry="10.9943" transform="rotate(-2.30505 43.7024 32.3436)" fill="#D9D9D9"/>
+                <path d="M11.6096 14.4575C11.2158 13.3207 10.9378 6.41625 11.2596 5.76295C11.5813 5.10964 17.4488 4.55332 17.8349 5.49828C18.2209 6.44323 18.4515 12.8374 18.1848 14.1928C17.9181 15.5483 12.0033 15.5943 11.6096 14.4575Z" fill="#2C2627"/>
+                <path d="M10.8889 14.7027C10.4286 13.8347 10.2148 8.5235 10.6197 8.01463C11.0246 7.50575 18.2018 6.97058 18.6562 7.69114C19.1105 8.41169 19.2758 13.3307 18.9254 14.3793C18.575 15.4278 11.3493 15.5708 10.8889 14.7027Z" fill="#2C2627"/>
+                <path d="M5.25414 53.9059C1.0087 48.4998 -0.336065 15.0917 3.56074 11.8365C7.45754 8.58119 75.4491 4.29532 79.6569 8.77339C83.8648 13.2515 84.8007 44.1974 81.3503 50.8428C77.8999 57.4883 9.49957 59.312 5.25414 53.9059Z" fill="#AA9D9E"/>
+                <path d="M77.4589 12.6293C77.4345 15.3086 74.3678 14.8945 70.5806 14.8599C66.7934 14.8254 63.7799 15.2815 63.7441 12.5042C63.7084 9.72687 66.8352 10.239 70.6224 10.2735C74.4096 10.308 77.4833 9.94994 77.4589 12.6293Z" fill="#F5F6F4"/>
+                <path d="M1.99426 40.2596C1.22672 36.5725 1.00179 31.0047 1.18652 27.8988C1.37126 24.793 82.7755 22.7556 82.8627 24.9209C82.9499 27.0861 83.2611 34.8195 82.767 37.9378C82.2728 41.056 2.76181 43.9468 1.99426 40.2596Z" fill="#B8B8D4"/>
+                <path d="M2.06934 42.1155C1.30179 38.4283 1.07686 32.8605 1.2616 29.7547C1.44633 26.6488 82.8506 24.6114 82.9378 26.7767C83.0249 28.942 83.3362 36.6754 82.8421 39.7936C82.3479 42.9119 2.83688 45.8026 2.06934 42.1155Z" fill="#7C7BB0"/>
+                <circle cx="41.9335" cy="31.8356" r="14.5505" transform="rotate(-2.30505 41.9335 31.8356)" fill="#2C2627"/>
+                <circle cx="41.2899" cy="31.2418" r="13.9313" transform="rotate(-2.30505 41.2899 31.2418)" fill="#C6BEBE"/>
+                <circle cx="41.6117" cy="31.5386" r="13.0026" transform="rotate(-2.30505 41.6117 31.5386)" fill="#F5F6F4"/>
+                <circle cx="41.6113" cy="31.5387" r="9.90671" transform="rotate(-2.30505 41.6113 31.5387)" fill="#2C2627"/>
+                </svg>
+          </div>
+        </label>
+      </div>
+
+    <div class="toggle__text toggle__text--lide">lidé</div>
+</section>
+
+
+
+
+
+
+
+
+<!-- nabídka psi -->
+<section class="nabidka nabidka--psi">
+    <svg class="nabidkaPsiTop" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="shadow-nabidkaPsiTop" color-interpolation-filters="sRGB">
+            <fedropshadow dx="20" dy="-8" stdDeviation="5" flood-opacity="0.1"/>
+        </filter>
+        <defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(128, 141, 104, 1)" offset="0%"></stop><stop stop-color="rgba(106, 117, 87, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L40,15.8C80,32,160,63,240,85.5C320,108,400,120,480,117.2C560,114,640,95,720,101.3C800,108,880,139,960,152C1040,165,1120,158,1200,152C1280,146,1360,139,1440,136.2C1520,133,1600,133,1680,110.8C1760,89,1840,44,1920,41.2C2000,38,2080,76,2160,76C2240,76,2320,38,2400,44.3C2480,51,2560,101,2640,117.2C2720,133,2800,114,2880,98.2C2960,82,3040,70,3120,60.2C3200,51,3280,44,3360,60.2C3440,76,3520,114,3600,120.3C3680,127,3760,101,3840,76C3920,51,4000,25,4080,12.7C4160,0,4240,0,4320,28.5C4400,57,4480,114,4560,133C4640,152,4720,133,4800,117.2C4880,101,4960,89,5040,79.2C5120,70,5200,63,5280,57C5360,51,5440,44,5520,50.7C5600,57,5680,76,5720,85.5L5760,95L5760,190L5720,190C5680,190,5600,190,5520,190C5440,190,5360,190,5280,190C5200,190,5120,190,5040,190C4960,190,4880,190,4800,190C4720,190,4640,190,4560,190C4480,190,4400,190,4320,190C4240,190,4160,190,4080,190C4000,190,3920,190,3840,190C3760,190,3680,190,3600,190C3520,190,3440,190,3360,190C3280,190,3200,190,3120,190C3040,190,2960,190,2880,190C2800,190,2720,190,2640,190C2560,190,2480,190,2400,190C2320,190,2240,190,2160,190C2080,190,2000,190,1920,190C1840,190,1760,190,1680,190C1600,190,1520,190,1440,190C1360,190,1280,190,1200,190C1120,190,1040,190,960,190C880,190,800,190,720,190C640,190,560,190,480,190C400,190,320,190,240,190C160,190,80,190,40,190L0,190Z"></path></svg>
+
+
+    <div class="background background--psi">
+        <div class="wrapper wrapper--center">
+
+
+
+
+
+            <!-- glide -->
+            <div class="glide glide--psi">
+                
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide glide__slide--side">
+                            <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                            <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.<br><br>
+                            A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+
+                        <li class="glide__slide glide__slide--main">
+                            <h2 class="heading heading--center">12 fotek</h2><br>
+                        
+                            <p class="plain-text plain-text--nabidka">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br><br>
+
+                            A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+
+                        <li class="glide__slide glide__slide--side">
+                            <h2 class="heading heading--small heading--center">10 fotek</h2><br>
+                            <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<br><br>Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="glide__bullets--hidden">
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <a class="nabidka__button" href="/kontakt/index.html">To chci!</a>
+
+        </div>
+    </div>
+
+
+    <svg class="nabidkaPsiBottom" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="shadow-nabidkaPsiBottom" color-interpolation-filters="sRGB">
+            <fedropshadow dx="-20" dy="8" stdDeviation="5" flood-opacity="0.1"/>
+        </filter>
+        <defs><lineargradient x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(128, 141, 104, 1)" offset="0%"></stop><stop stop-color="rgba(106, 117, 87, 1)" offset="100%"></stop></lineargradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,153L48,141.7C96,130,192,108,288,104.8C384,102,480,119,576,127.5C672,136,768,136,864,127.5C960,119,1056,102,1152,79.3C1248,57,1344,28,1440,34C1536,40,1632,79,1728,102C1824,125,1920,130,2016,119C2112,108,2208,79,2304,82.2C2400,85,2496,119,2592,133.2C2688,147,2784,142,2880,133.2C2976,125,3072,113,3168,116.2C3264,119,3360,136,3456,127.5C3552,119,3648,85,3744,82.2C3840,79,3936,108,4032,99.2C4128,91,4224,45,4320,34C4416,23,4512,45,4608,53.8C4704,62,4800,57,4896,48.2C4992,40,5088,28,5184,45.3C5280,62,5376,108,5472,104.8C5568,102,5664,51,5760,28.3C5856,6,5952,11,6048,14.2C6144,17,6240,17,6336,34C6432,51,6528,85,6624,93.5C6720,102,6816,85,6864,76.5L6912,68L6912,170L6864,170C6816,170,6720,170,6624,170C6528,170,6432,170,6336,170C6240,170,6144,170,6048,170C5952,170,5856,170,5760,170C5664,170,5568,170,5472,170C5376,170,5280,170,5184,170C5088,170,4992,170,4896,170C4800,170,4704,170,4608,170C4512,170,4416,170,4320,170C4224,170,4128,170,4032,170C3936,170,3840,170,3744,170C3648,170,3552,170,3456,170C3360,170,3264,170,3168,170C3072,170,2976,170,2880,170C2784,170,2688,170,2592,170C2496,170,2400,170,2304,170C2208,170,2112,170,2016,170C1920,170,1824,170,1728,170C1632,170,1536,170,1440,170C1344,170,1248,170,1152,170C1056,170,960,170,864,170C768,170,672,170,576,170C480,170,384,170,288,170C192,170,96,170,48,170L0,170Z"></path></svg>
+</section>
+
+
+
+
+
+
+
+
+<!-- nabídka lidé -->
+<section class="nabidka nabidka--lide">
+    <svg class="nabidkaLideTop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <filter id="shadow-nabidkaLideTop" color-interpolation-filters="sRGB">
+            <fedropshadow dx="20" dy="-8" stdDeviation="5" flood-opacity="0.1"/>
+        </filter>
+        <path fill="#BB8B9E" fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,64C384,96,480,160,576,181.3C672,203,768,181,864,154.7C960,128,1056,96,1152,80C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+    <div class="background background--lide">
+        <div class="wrapper wrapper--center">
+
+
+
+
+
+            <!-- glide -->
+            <div class="glide glide--psi">
+                
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide glide__slide--side">
+                            <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                            <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.<br><br>
+                            A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+
+                        <li class="glide__slide glide__slide--main">
+                            <h2 class="heading heading--center">12 fotek</h2><br>
+                        
+                            <p class="plain-text plain-text--nabidka">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br><br>
+
+                            A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+
+                        <li class="glide__slide glide__slide--side">
+                            <h2 class="heading heading--small heading--center">10 fotek</h2><br>
+                            <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<br><br>Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="glide__bullets--hidden">
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <a class="nabidka__button" href="/kontakt/index.html">To chci!</a>
+
+        </div>
+    </div>
+
+    <svg class="nabidkaLideBottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <filter id="shadow-nabidkaLideBottom" color-interpolation-filters="sRGB">
+            <fedropshadow dx="-20" dy="8" stdDeviation="5" flood-opacity="0.1"/>
+        </filter>
+        <path fill="#C398A9" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,117.3C384,128,480,160,576,160C672,160,768,128,864,106.7C960,85,1056,75,1152,101.3C1248,128,1344,192,1392,224L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+</section>
+
+
+
+
+
+
+
+
+
+<script src="/glide.min.js"></script>
+
+<script>
+  new Glide('.glide', {
+	type: 'carousel',
+	perView: 3,
+    breakpoints: {
+        768: {perView: 1},
+    },
+    gap: 16,
+    hoverpause: true,
+    keyboard: true
+
+   
+    
+  }).mount()
+</script>
+
+
+
+

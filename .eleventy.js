@@ -9,7 +9,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("css");
 
   eleventyConfig.addPassthroughCopy("/fslightbox.js");
-  eleventyConfig.addPassthroughCopy("/toggle.js");
+
+  eleventyConfig.addPassthroughCopy("glide.min.js")
+  
 
 
 	// Zkopírovat všechny *.js soubory na stejné umístění do _site
