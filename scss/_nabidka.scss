@@ -64,15 +64,6 @@
         padding-top: 0;
     }
 
-    &--lide {
-        margin-bottom: var.$spacer-s;
-        padding-top: var.$spacer-s;
-
-        @media screen and (min-width: 768px){
-            margin-bottom: 0;
-            padding-top: 0;
-        }
-    }
 
     &__slide {
         padding: var.$spacer-m;
