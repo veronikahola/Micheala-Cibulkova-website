@@ -115,7 +115,6 @@
             justify-self: end;
             text-align: right;
         }
-
     }
 
     &__img {
@@ -123,6 +122,8 @@
         
     }
 }
+
+
 
 @media screen and (min-width: 768px){
 
@@ -147,7 +148,17 @@
     }
 }
 
-
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 
 
 

@@ -5,6 +5,7 @@ title: Nabídka
 
 
 <!-- změna barvy textu a display gallerie -->
+<!-- animace při pohybu -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const toggleCheckbox = document.querySelector('.toggle__checkbox');
@@ -47,8 +48,29 @@ title: Nabídka
         });
         
     });
-</script>
 
+
+
+    // function reveal() {
+    // var reveals = document.querySelectorAll(".reveal");
+
+    // for (var i = 0; i < reveals.length; i++) {
+    //     var windowHeight = window.innerHeight;
+    //     var elementTop = reveals[i].getBoundingClientRect().top;
+    //     var elementVisible = 150;
+
+    //     if (elementTop < windowHeight - elementVisible) {
+    //     reveals[i].classList.add("active");
+    //     } else {
+    //     reveals[i].classList.remove("active");
+    //     }
+    // }
+    // }
+
+    // window.addEventListener("scroll", reveal);
+
+
+</script>
 
 
 
@@ -181,27 +203,27 @@ title: Nabídka
 
     <div class="wrapper faq">
 
-        <div class="faq__hand">
+        <div class="faq__hand reveal">
             <img class="faq__img" src="/images/hand.svg" alt="ilustrace ruka s foťákem">
         </div>
 
-        <div class="faq__question q1">
+        <div class="faq__question reveal q1">
             <h2 class="heading heading--small"><span class="pink">jak</span> takové focení probíhá?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
             
 
-        <div class="faq__question q2">
+        <div class="faq__question reveal q2">
             <h2 class="heading heading--small"><span class="pink">kdy</span> budou fotky hotové?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia.</p>
         </div>
 
-        <div class="faq__question q3">
+        <div class="faq__question reveal q3">
             <h2 class="heading heading--small"><span class="pink">co</span> když nevyjde počasí?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
 
-        <div class="faq__question q4">
+        <div class="faq__question reveal q4">
             <h2 class="heading heading--small"><span class="pink">kolik</span> to stojí?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
@@ -212,7 +234,7 @@ title: Nabídka
 
 
     <!-- odkazy -->
-    <div class="wrapper">
+    <div class="wrapper reveal">
         <h1 class="heading heading--center">máte nějaké <span class="yellow">další otázky?</span></h1>
         <p class="plain-text plain-text--center">Nebojte se mi <a class="plain-text plain-text--light" href="/kontakt/index.html">napsat</a>!</p>
     </div>
@@ -270,7 +292,7 @@ title: Nabídka
 
 
 
-
+<script src="/reveal.js"></script>
 <script src="/glide.min.js"></script>
 
 <script>
@@ -288,6 +310,8 @@ title: Nabídka
 
 
 </script>
+
+
 
 
 

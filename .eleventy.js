@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("/fslightbox.js");
 
   eleventyConfig.addPassthroughCopy("glide.min.js")
+  eleventyConfig.addPassthroughCopy("reveal.js")
   
 
 
