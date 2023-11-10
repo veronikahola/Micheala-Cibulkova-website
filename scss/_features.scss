@@ -176,4 +176,23 @@ button {
   }
 
 
-
+  .reveal--left {
+    transform: translateX(-100px);
+  }
+  
+  .reveal--right {
+    transform: translateX(100px);
+  }
+  
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .reveal.active.reveal--left {
+    transform: translateX(0);
+  }
+  
+  .reveal.active.reveal--right {
+    transform: translateX(0);
+  }
