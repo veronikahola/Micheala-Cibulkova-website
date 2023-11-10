@@ -860,9 +860,6 @@ button {
     margin-top: 0;
   }
 }
-.nabidka--lide {
-  display: none;
-}
 .nabidka__button {
   text-decoration: none;
   font-size: 40px;

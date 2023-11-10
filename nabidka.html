@@ -26,7 +26,7 @@ title: Nabídka
                 toggleTextLide.style.color = '#685B5E';
                 nabidkaPsi.style.display = 'none';
                 nabidkaLide.style.display = 'grid';
-                
+                nabidkaLide.style.visibility = 'visible';
             } else {
                 toggleTextPsi.style.transition = 'color 0.5s';
                 toggleTextLide.style.transition = 'color 0.5s';
@@ -47,8 +47,16 @@ title: Nabídka
             toggleCheckbox.checked = true;
             toggleCheckbox.dispatchEvent(new Event('change'));
         });
+
+
+        nabidkaLide.style.display = 'none';
+        nabidkaLide.style.visibility = 'visible';
+        toggleTextPsi.style.color = '#685B5E';
+        toggleTextLide.style.color = '#B3A8A8';
+        toggleCheckbox.checked = false;
         
     });
+
 
 
 </script>
@@ -188,23 +196,23 @@ title: Nabídka
             <img class="faq__img" src="/images/hand.svg" alt="ilustrace ruka s foťákem">
         </div>
 
-        <div class="faq__question reveal q1">
+        <div class="faq__question reveal reveal--left q1">
             <h2 class="heading heading--small"><span class="pink">jak</span> takové focení probíhá?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
             
 
-        <div class="faq__question reveal q2">
+        <div class="faq__question reveal reveal--right q2">
             <h2 class="heading heading--small"><span class="pink">kdy</span> budou fotky hotové?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia.</p>
         </div>
 
-        <div class="faq__question reveal q3">
+        <div class="faq__question reveal reveal--left q3">
             <h2 class="heading heading--small"><span class="pink">co</span> když nevyjde počasí?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
 
-        <div class="faq__question reveal q4">
+        <div class="faq__question reveal reveal--right q4">
             <h2 class="heading heading--small"><span class="pink">kolik</span> to stojí?</h2>
             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows byplace and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
         </div>
@@ -249,23 +257,15 @@ title: Nabídka
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
                         <li class="glide__slide glide__slide--side">
-                            <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                            <h2 class="heading heading--small heading--center">svatební focení</h2><br>
                             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.<br><br>
                             A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
                             </p>
                         </li>
 
-                        <li class="glide__slide glide__slide--main">
-                            <h2 class="heading heading--center">12 fotek</h2><br>
-                        
-                            <p class="plain-text plain-text--nabidka">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br><br>
-
-                            A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                            </p>
-                        </li>
 
                         <li class="glide__slide glide__slide--side">
-                            <h2 class="heading heading--small heading--center">10 fotek</h2><br>
+                            <h2 class="heading heading--small heading--center">předsvatební focení</h2><br>
                             <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<br><br>Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
                             </p>
                         </li>
@@ -282,8 +282,6 @@ title: Nabídka
                 </div>
 
             </div>
-
-    
         </div>
     </div>
     
@@ -339,9 +337,6 @@ title: Nabídka
         hoverpause: true,
         keyboard: true
     }).mount()
-
-    
-
 
 </script>
 
