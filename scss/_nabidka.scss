@@ -7,11 +7,11 @@
     padding-bottom: var.$spacer-m;
 
     &--psi {
-    background-image: linear-gradient(to bottom, #808D68, #7E8D68);
+    background-image: linear-gradient(to bottom, #808D68, #94A07E, #94A07E, #75815F);
     }
 
     &--lide {
-        background-image: linear-gradient(to bottom, #BB8B9E, #C398A9);
+        background-image: linear-gradient(to bottom, #BB8B9E, #C398A9, #C398A9, #BB8B9E);
     }
 }
 
@@ -21,7 +21,7 @@
     margin-top: var.$spacer-m;
 
     @media screen and (min-width: 768px){
-        margin-top: 0;
+        margin-top: var.$spacer-s;
     }
 
 
@@ -112,41 +112,12 @@
 
 
 
-.faq {
-    padding: var.$spacer-m var.$spacer-s;
-    position: relative;
-    z-index: 1;
 
-    @media screen and (min-width: 768px){
-        padding: 0 0 var.$spacer-l 0;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
-        align-items: end;
-    }
 
-    &__question {
-        padding-bottom: var.$spacer-l;
-    }
 
-    &__hand {
-        display: none;
 
-        @media screen and (min-width: 768px){
-            display: block;
-            grid-column: 4/6;
-            grid-row: 1/3;
-            padding-bottom: var.$spacer-l;
-            justify-self: end;
-            text-align: right;
-        }
-    }
 
-    &__img {
-        width: 80%;
-        
-    }
-}
+
 
 
 
@@ -172,3 +143,62 @@
         grid-row: 5/6;
     }
 }
+
+
+
+
+
+
+
+.faq {
+    padding: var.$spacer-m var.$spacer-s;
+    // position: relative;
+    // z-index: 1;
+
+    @media screen and (min-width: 768px){
+        padding: 0 0 var.$spacer-s 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+        align-items: start;
+    }
+
+    &__question {
+        padding-bottom: var.$spacer-l;
+        position: relative;
+    }
+
+    &__hand {
+        display: none;
+
+        @media screen and (min-width: 768px){
+            display: block;
+            grid-column: 4/6;
+            grid-row: 1/3;
+            padding-bottom: var.$spacer-l;
+            justify-self: end;
+            text-align: right;
+        }
+    }
+
+    &__img {
+        width: 75%;
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: -100px;
+
+    &--right {
+        right: -300px;
+    }
+
+    &--left {
+        left: -300px;
+    }
+}
+
+// .parent {
+//     position: relative;
+// }

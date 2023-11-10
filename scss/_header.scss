@@ -151,11 +151,11 @@
         transition: transform 0.3s, color 0.3s;
 
         &:hover {
-            animation: changeColor 3s infinite;
+            animation: changeColor 2s infinite;
         }
 
         &--dark:hover {
-            animation: changeColorDark 3s infinite;
+            animation: changeColorDark 2s infinite;
         }
         
         @media screen and (max-width: 768px) {
@@ -172,16 +172,14 @@
 }
 
 @keyframes changeColor {
-    0% { color: var.$color-white; } 
-    33% { color: var.$color-second; } 
-    66% { color: var.$color-white; } 
-    100% { color: var.$color-first; }
+    0% { color: var.$color-first; } 
+    55% { color: var.$color-white; } 
+    100% { color: var.$color-first; } 
 }
 
 @keyframes changeColorDark {
-    0% { color: var.$color-brown; } 
-    33% { color: var.$color-second; } 
-    66% { color: var.$color-brown; } 
-    100% { color: var.$color-first; }
+    0% { color: var.$color-first; } 
+    55% { color: var.$color-brown; } 
+    100% { color: var.$color-first; } 
 }
 

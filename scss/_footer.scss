@@ -5,7 +5,7 @@
 
 .footer {
     padding: 0;
-    background: linear-gradient(to bottom, #78686C, #625559);
+    background: linear-gradient(to bottom, #78686C, #78686C, #625559);
     max-height: 30vh;
 
 
@@ -51,5 +51,10 @@
         align-self: end;
         padding: 0 0 var.$spacer-s 0;
         width: 100%;
+    }
+
+    &__wave {
+        filter: url(#shadow--footer);
+        margin-top: var.$spacer-m;
     }
 }

@@ -2,13 +2,20 @@
 
 
 
+.background {
+    &--brown {
+        background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
+        height: 100%;
+    }
+}
+
 .banner {
     text-align: center;
     position: relative;
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
     padding: 0 var.$spacer-m;
 
     @media screen and (min-width: 768px){
@@ -44,6 +51,7 @@
         @media screen and (min-width: 768px){
             grid-column: 1/2;
             grid-row: 1/4;
+            width: 70%;
         }
     }
 
@@ -62,15 +70,7 @@
             padding: 0 0 var.$spacer-m var.$spacer-m;
         }
     }
-
-
-   
-    
-
 }
-
-
-
 
 
 
@@ -81,81 +81,122 @@
 
 
 
-// vyskakující aktuality
-.hidden {
+.akce {
+
     position: relative;
-    text-align: center;
-
-    @media screen and (min-width: 768px){
-        overflow: hidden;
-    }
+    bottom: 0;
     
-
     &__content {
         color: var.$color-white;
         text-align: center;
-        top: 100%;
-        width: 100%;
+        padding: 0;
         
-
-        @media screen and (min-width: 768px){
-            transition: transform 0.7s;
-            padding-top: var.$spacer-m;
-            margin-top: 5px;
-            position: absolute;
-        }
-    }
-
-
-    @media screen and (min-width: 768px){
-        &:hover .hidden__content {
-            transform: translateY(-100%);
-        }
-    }
-
-
-    &__mark {
-        display: none;
-        font-family: var.$font-logo;
-        font-size: var.$font-size-l;
-        color: var.$color-second;
-        padding: var.$spacer-l 0;
-        margin-bottom: var.$spacer-xl;
-        margin-top: var.$spacer-l;
-
-        @media screen and (min-width: 768px){
-            display: block;
-        }
     }
 
     &__text {
-        background-image: linear-gradient(to top, #C398A9,  var.$color-second);
-        // background-color: var.$color-second;
+        background-image: linear-gradient(to top, #C398A9, #BB8B9E);
         margin: -7px 0 0 0;
-        padding: 0 var.$spacer-m var.$spacer-l var.$spacer-m;
+        padding: 0 var.$spacer-m var.$spacer-m var.$spacer-m;
         font-size: var.$font-size-xs;
 
         @media screen and (min-width: 768px){
             font-size: var.$font-size-s;
         }
+    }
 
+    &__heading {
+        font-family: var.$font-heading;
+        font-size: var.$font-size-m;
+        color: var.$color-brown;
+        letter-spacing: 1px;
+        margin: 0;
 
-        &--heading {
-            font-family: var.$font-heading;
-            font-size: var.$font-size-m;
-            color: var.$color-brown;
-            letter-spacing: 1px;
-            margin: 0;
-
-            @media screen and (min-width: 768px){
-                font-size: var.$font-size-l;
-            }
+        @media screen and (min-width: 768px){
+            font-size: var.$font-size-l;
         }
+    }
+
+    &__wave {
+        filter: url(#shadow-akce);
     }
 }
 
 
 
-.landing {
-    min-height: 100vh;
-}
+
+
+// původní hidden sekce
+// .hidden {
+//     position: relative;
+//     text-align: center;
+
+//     @media screen and (min-width: 768px){
+//         overflow: hidden;
+//     }
+    
+
+//     &__content {
+//         color: var.$color-white;
+//         text-align: center;
+//         top: 100%;
+//         width: 100%;
+        
+
+//         @media screen and (min-width: 768px){
+//             transition: transform 0.7s;
+//             padding-top: var.$spacer-m;
+//             margin-top: 5px;
+//             position: absolute;
+//         }
+//     }
+
+
+//     @media screen and (min-width: 768px){
+//         &:hover .hidden__content {
+//             transform: translateY(-100%);
+//         }
+//     }
+
+
+//     &__mark {
+//         display: none;
+//         font-family: var.$font-logo;
+//         font-size: var.$font-size-l;
+//         color: var.$color-second;
+//         padding: var.$spacer-l 0;
+//         margin-bottom: var.$spacer-xl;
+//         margin-top: var.$spacer-l;
+
+//         @media screen and (min-width: 768px){
+//             display: block;
+//         }
+//     }
+
+//     &__text {
+//         background-image: linear-gradient(to top, #C398A9,  var.$color-second);
+//         // background-color: var.$color-second;
+//         margin: -7px 0 0 0;
+//         padding: 0 var.$spacer-m var.$spacer-l var.$spacer-m;
+//         font-size: var.$font-size-xs;
+
+//         @media screen and (min-width: 768px){
+//             font-size: var.$font-size-s;
+//         }
+
+
+//         &--heading {
+//             font-family: var.$font-heading;
+//             font-size: var.$font-size-m;
+//             color: var.$color-brown;
+//             letter-spacing: 1px;
+//             margin: 0;
+
+//             @media screen and (min-width: 768px){
+//                 font-size: var.$font-size-l;
+//             }
+//         }
+//     }
+// }
+
+
+

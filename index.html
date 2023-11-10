@@ -58,8 +58,8 @@
             
        </section>
 
-       
-       <section class="hidden">
+       <!-- původní hidden sekce -->
+       <!-- <section class="hidden">
             <p class="hidden__mark">?</p>
             <div class="hidden__content">
                 <svg class="hidden__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -78,7 +78,29 @@
                 </div>
                
             </div>
-       </section>
+       </section> -->
+
+
+        <!-- nová sekce se scrollováním -->
+        <section class="akce">
+            <div class="akce__content reveal">
+
+                <svg class="akce__wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 180" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(187, 139, 158, 1)" offset="0%"></stop><stop stop-color="rgba(172, 114, 137, 1)" offset="100%"></stop></linearGradient></defs>
+                    <filter id="shadow-akce" color-interpolation-filters="sRGB">
+                        <fedropshadow dx="20" dy="-8" stdDeviation="7" flood-opacity="0.1"/>
+                    </filter>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L60,75C120,60,240,30,360,42C480,54,600,108,720,126C840,144,960,126,1080,108C1200,90,1320,72,1440,72C1560,72,1680,90,1800,90C1920,90,2040,72,2160,54C2280,36,2400,18,2520,9C2640,0,2760,0,2880,9C3000,18,3120,36,3240,51C3360,66,3480,78,3600,93C3720,108,3840,126,3960,117C4080,108,4200,72,4320,66C4440,60,4560,84,4680,96C4800,108,4920,108,5040,93C5160,78,5280,48,5400,54C5520,60,5640,102,5760,108C5880,114,6000,84,6120,87C6240,90,6360,126,6480,129C6600,132,6720,102,6840,75C6960,48,7080,24,7200,18C7320,12,7440,24,7560,27C7680,30,7800,24,7920,21C8040,18,8160,18,8280,30C8400,42,8520,66,8580,78L8640,90L8640,180L8580,180C8520,180,8400,180,8280,180C8160,180,8040,180,7920,180C7800,180,7680,180,7560,180C7440,180,7320,180,7200,180C7080,180,6960,180,6840,180C6720,180,6600,180,6480,180C6360,180,6240,180,6120,180C6000,180,5880,180,5760,180C5640,180,5520,180,5400,180C5280,180,5160,180,5040,180C4920,180,4800,180,4680,180C4560,180,4440,180,4320,180C4200,180,4080,180,3960,180C3840,180,3720,180,3600,180C3480,180,3360,180,3240,180C3120,180,3000,180,2880,180C2760,180,2640,180,2520,180C2400,180,2280,180,2160,180C2040,180,1920,180,1800,180C1680,180,1560,180,1440,180C1320,180,1200,180,1080,180C960,180,840,180,720,180C600,180,480,180,360,180C240,180,120,180,60,180L0,180Z"></path>
+                </svg>
+
+
+                <div class="akce__text">
+                    <p class="akce__heading">AKCE podzimní focení!</p>
+                    <p class="plain-text"> Far far away, behind the word mountains, far from the countries.</p>
+                </div>
+            </div>
+
+        </section>
       
 
 
@@ -88,7 +110,7 @@
 
     </div>
 
-
+    <script src="/reveal.js"></script>
 </body>
 
 
