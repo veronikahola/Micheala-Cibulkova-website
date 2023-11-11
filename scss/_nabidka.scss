@@ -24,15 +24,6 @@
         margin-top: var.$spacer-s;
     }
 
-
-    &__button {
-        text-decoration: none;
-        font-size: var.$font-size-l;
-        font-family: var.$font-logo;
-        color: var.$color-white;
-        letter-spacing: 2px;
-    }
-
     &PsiTop {
         filter: url(#shadow-nabidkaPsiTop);
     }
@@ -49,6 +40,7 @@
         filter: url(#shadow-nabidkaLideBottom);
     }   
 }
+
 
 
 

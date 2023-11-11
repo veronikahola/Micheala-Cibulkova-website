@@ -49,10 +49,6 @@ p {
     &--light {
         color: var.$color-light;
         text-decoration: none;
-
-        &:hover {
-            color: var.$color-second;
-        }
     }
 
     &--white {
@@ -157,6 +153,62 @@ p {
     &--center {
         text-align: center;
         max-width: 1100px;
+    }
+
+}
+
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  
+  
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1.5px;
+        bottom: 0;
+        left: 0;
+        background-color: var.$color-light;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+
+
+.button--logo {
+    text-decoration: none;
+    font-size: var.$font-size-l;
+    font-family: var.$font-logo;
+    color: var.$color-white;
+    letter-spacing: 2px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var.$color-white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+      
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
 

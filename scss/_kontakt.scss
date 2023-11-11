@@ -1,0 +1,130 @@
+@use 'var';
+
+
+
+.form {
+    width: 100%;
+    text-align: justify;
+    margin: -20px auto 0 auto;
+    padding-top: 30px;
+
+    @media screen and (min-width: 768px){
+        max-width: 800px;
+    }
+
+
+    &__field {
+        margin-bottom: var.$spacer-xs;
+        font-size: var.$font-size-s;
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        &--flex {
+            @media screen and (min-width: 768px){
+                display: flex;
+                flex: 1 1 auto;
+                gap: var.$spacer-xs;
+            }
+        }
+
+        &--margin {
+            margin-bottom: var.$spacer-m;
+        }
+
+
+        &:hover .form__label,
+        &:focus .form__label {
+            transform: translateY(-10px);
+        }
+
+
+        &:hover .form__input,
+        &:focus .form__input {
+            background-color: var.$color-white;
+            color: var.$color-brown;
+        }
+        
+
+
+        & > .form__input:focus + .form__label {
+            transform: translateY(-10px);
+        }
+
+
+        & > .form__input:focus {
+            border-color: var.$color-brown;
+            outline-style: none;
+            background-color: var.$color-white;
+            color: var.$color-brown;
+        }
+
+
+        & > .form__input:not(:placeholder-shown) + .form__label {
+            transform: translateY(-10px);
+            }
+    }
+
+    &__label {
+        display: block;
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+
+        padding-left: var.$spacer-xs;
+        margin-top: - var.$spacer-xs;
+        color: var.$color-light;
+        font-size: var.$font-size-xs;
+        transition: .2s;
+
+        &--textarea {
+            top: 13%;
+        }
+    }
+
+    &__input {
+        border: 1px solid var.$color-light;
+        border-radius: 10px;
+        padding: 30px 0 var.$spacer-xs var.$spacer-xs;
+        background-color: transparent;
+        box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.2);
+
+        color: var.$color-white;
+        font-family: var.$font-main;
+        font-size: var.$font-size-xs;
+
+        @media screen and (min-width: 768px){
+            font-size: var.$font-size-s;
+        }
+    }
+}
+
+
+
+
+
+
+.kontakt {
+    &__wave {
+        filter: url(#shadow--kontakt);
+        margin-top: var.$spacer-m;
+    }
+
+    &--dark {
+        background-image: linear-gradient(to bottom, #574C4F, #78686C);
+        padding: 0 var.$spacer-s var.$spacer-m var.$spacer-s;
+        
+
+        @media screen and (min-width: 768px){
+            padding-bottom: var.$spacer-l;
+        }
+    }
+}
+
+
