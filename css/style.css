@@ -64,6 +64,10 @@ p {
   color: #7E8D68;
 }
 
+.white {
+  color: #F5F6F4;
+}
+
 .callout {
   font-family: "Jomhuria", serif;
   font-size: 25px;
@@ -103,6 +107,17 @@ p {
 @media screen and (min-width: 768px) {
   .heading--hidden {
     display: none;
+  }
+}
+.heading--unhidden {
+  display: none;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .heading--unhidden {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 40px;
   }
 }
 .heading--center {
@@ -185,7 +200,7 @@ p {
 
 .menu {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr auto;
   grid-template-rows: auto auto;
   padding: 40px;
   gap: 20px;
@@ -219,6 +234,10 @@ p {
     flex-direction: column;
     text-align: center;
   }
+  .menu__checkbox:checked ~ .menu__toggler {
+    rotate: -90deg;
+    transform-origin: center;
+  }
 }
 .menu__mc {
   font-family: "Reenie Beanie", cursive;
@@ -239,11 +258,13 @@ p {
   color: #F5F6F4;
   font-size: 30px;
   margin: 0;
+  padding: 0;
   text-align: end;
   align-items: end;
   cursor: pointer;
   grid-column: 2/3;
   grid-row: 1/2;
+  transition: rotate 0.3s ease-out;
 }
 @media screen and (min-width: 768px) {
   .menu__toggler {
@@ -735,6 +756,7 @@ button {
   z-index: 1;
   padding: 20px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .gallery {
@@ -913,7 +935,7 @@ button {
   width: 100%;
   text-align: justify;
   margin: -20px auto 0 auto;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .form {

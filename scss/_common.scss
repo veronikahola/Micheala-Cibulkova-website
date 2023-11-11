@@ -73,6 +73,10 @@ p {
     color: var.$color-third;
 }
 
+.white {
+    color: var.$color-white;
+}
+
 .callout {
     font-family: var.$font-heading;
     font-size: 25px;
@@ -112,6 +116,17 @@ p {
     &--hidden {
         @media screen and (min-width: 768px){
             display: none;
+        }
+    }
+
+    &--unhidden {
+        display: none;
+        margin-bottom: var.$spacer-s;
+
+        @media screen and (min-width: 768px){
+            display: block;
+            margin-bottom: var.$spacer-s;
+            font-size: var.$font-size-l;
         }
     }
 
@@ -213,4 +228,35 @@ p {
 }
 
 
+// .link {
+//     font-family: var.$font-heading;
+//     font-size: var.$font-size-l;
+//     color: var.$color-brown;
+//     letter-spacing: 2px;
+//     line-height: 0.5;
+//     margin: 0;
+//     text-decoration: none;
+//     position: relative;
 
+//     @media screen and (min-width: 768px){
+//         font-size: var.$font-size-xl;
+//     }
+
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         width: 100%;
+//         transform: scaleX(0);
+//         height: 3px;
+//         bottom: 12px;
+//         left: 0;
+//         background-color: var.$color-first;
+//         transform-origin: bottom right;
+//         transition: transform 0.25s ease-out;
+//     }
+      
+//     &:hover::after {
+//         transform: scaleX(1);
+//         transform-origin: bottom left;
+//     }
+// }
