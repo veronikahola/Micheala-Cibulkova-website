@@ -303,14 +303,15 @@ title: Nabídka
             let perPageValue = 1;  // Default value
         
         if (siema.classList.contains('siema-3-slides')) {
-            perPageValue = 1;
+            perPageValue = 3;
         } else if (siema.classList.contains('siema-2-slides')) {
-            perPageValue = 1;
+            perPageValue = 2;
         }
         
         new Siema({
             selector: siema,
             perPage: {
+            100: 1,
             768: perPageValue,
             },
         });
