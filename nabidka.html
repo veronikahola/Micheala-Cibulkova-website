@@ -7,55 +7,7 @@ title: Nabídka
 <!-- změna barvy textu a display gallerie -->
 <!-- animace při pohybu -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleCheckbox = document.querySelector('.toggle__checkbox');
-        const toggleTextPsi = document.querySelector('.toggle__text--psi');
-        const toggleTextLide = document.querySelector('.toggle__text--lide');
-
-        const nabidkaPsi = document.querySelector('.nabidka--psi');
-        const nabidkaLide = document.querySelector('.nabidka--lide');
-
-        
-
-        toggleCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                toggleTextPsi.style.transition = 'color 0.5s';
-                toggleTextLide.style.transition = 'color 0.5s';
-            
-                toggleTextPsi.style.color = '#B3A8A8';
-                toggleTextLide.style.color = '#685B5E';
-                nabidkaPsi.style.display = 'none';
-                nabidkaLide.style.display = 'grid';
-                nabidkaLide.style.visibility = 'visible';
-            } else {
-                toggleTextPsi.style.transition = 'color 0.5s';
-                toggleTextLide.style.transition = 'color 0.5s';
-                
-                toggleTextPsi.style.color = '#685B5E';
-                toggleTextLide.style.color = '#B3A8A8';
-                nabidkaPsi.style.display = 'grid';
-                nabidkaLide.style.display = 'none';
-            }
-        });
-
-        toggleTextPsi.addEventListener('click', function() {
-            toggleCheckbox.checked = false;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-        toggleTextLide.addEventListener('click', function() {
-            toggleCheckbox.checked = true;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-
-        nabidkaLide.style.display = 'none';
-        nabidkaLide.style.visibility = 'visible';
-        toggleTextPsi.style.color = '#685B5E';
-        toggleTextLide.style.color = '#B3A8A8';
-        toggleCheckbox.checked = false;
-        
-    });
+    
 
 
 
@@ -141,19 +93,19 @@ title: Nabídka
 
     <div class="background background--psi">
         <div class="wrapper wrapper--center">
-            <div class="firstSiema">
+            <div class="siema siema-3-slides">
                 <div class="slide">
                     <h2 class="heading heading--small heading--center">7 fotek</h2><br>
                         <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.</p><br>
                 </div>
 
                 <div class="slide">
-                    <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                    <h2 class="heading heading--small heading--center">12 fotek</h2><br>
                         <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.</p><br>
                 </div>
 
                 <div class="slide">
-                    <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                    <h2 class="heading heading--small heading--center">10 fotek</h2><br>
                         <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.</p><br>
                 </div>
 
@@ -250,14 +202,14 @@ title: Nabídka
 
     <div class="background background--lide">
         <div class="wrapper wrapper--center">
-            <div class="secondSiema">
+            <div class="siema siema-2-slides">
                 <div class="slide">
-                    <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                    <h2 class="heading heading--small heading--center">předsvatební focení</h2><br>
                         <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.</p><br>
                 </div>
 
                 <div class="slide">
-                    <h2 class="heading heading--small heading--center">7 fotek</h2><br>
+                    <h2 class="heading heading--small heading--center">svatební focení</h2><br>
                         <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean.</p><br>
                 </div>
 
@@ -290,50 +242,82 @@ title: Nabídka
 <script src="/siema.min.js"></script>
 
 
-<!-- <script>
-   const siemas = document.querySelectorAll('.siema');
+<script>
 
-for (const siema of siemas) {
-  let perPageValue = 1;  // Default value
+    // script pro togle
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleCheckbox = document.querySelector('.toggle__checkbox');
+        const toggleTextPsi = document.querySelector('.toggle__text--psi');
+        const toggleTextLide = document.querySelector('.toggle__text--lide');
 
-  if (siema.classList.contains('siema-3-slides')) {
-    perPageValue = 3;
-  } else if (siema.classList.contains('siema-2-slides')) {
-    perPageValue = 2;
-  }
+        const nabidkaPsi = document.querySelector('.nabidka--psi');
+        const nabidkaLide = document.querySelector('.nabidka--lide');
 
-  new Siema({
-    selector: siema,
-    perPage: {
-      768: perPageValue,
-    },
-    // Add additional Siema options here
-  });
-}
-</script> -->
+        
 
-<!-- <script>
-  const siemas = document.querySelectorAll('.siema');
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                toggleTextPsi.style.transition = 'color 0.5s';
+                toggleTextLide.style.transition = 'color 0.5s';
+            
+                toggleTextPsi.style.color = '#B3A8A8';
+                toggleTextLide.style.color = '#685B5E';
+                nabidkaPsi.style.display = 'none';
+                nabidkaLide.style.display = 'block';
+            } else {
+                toggleTextPsi.style.transition = 'color 0.5s';
+                toggleTextLide.style.transition = 'color 0.5s';
+                
+                toggleTextPsi.style.color = '#685B5E';
+                toggleTextLide.style.color = '#B3A8A8';
+                nabidkaPsi.style.display = 'block';
+                nabidkaLide.style.display = 'none';
+            }
+        });
+
+        toggleTextPsi.addEventListener('click', function() {
+            toggleCheckbox.checked = false;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
+
+        toggleTextLide.addEventListener('click', function() {
+            toggleCheckbox.checked = true;
+            toggleCheckbox.dispatchEvent(new Event('change'));
+        });
 
 
-    for(const siema of siemas) {
-    new Siema({
-        selector: siema,
-        perPage: {
-            768: 3
+        nabidkaLide.style.display = 'none';
+        nabidkaPsi.style.display = 'block';
+        toggleTextPsi.style.color = '#685B5E';
+        toggleTextLide.style.color = '#B3A8A8';
+        toggleCheckbox.checked = false;
+        
+    });
+
+
+
+    // script pro siemu
+    const siemas = document.querySelectorAll('.siema');
+ 
+        for (const siema of siemas) {
+            let perPageValue = 1;  // Default value
+        
+        if (siema.classList.contains('siema-3-slides')) {
+            perPageValue = 1;
+        } else if (siema.classList.contains('siema-2-slides')) {
+            perPageValue = 1;
         }
-    })
-    }
+        
+        new Siema({
+            selector: siema,
+            perPage: {
+            768: perPageValue,
+            },
+        });
+        }
 
-    
+ </script>
 
-
-</script> -->
-
-
-const mySiema = new Siema();
-
-const mySecondSiema = new Siema({})
 
 
 
