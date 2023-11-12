@@ -274,6 +274,16 @@ title: Nabídka
       siemaInstances.forEach(function (siemaInstance) {
         siemaInstance.resize();
       });
+
+      // For mobile browsers, listen for visibilitychange event
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) {
+          // If the document is visible, trigger Siema resize
+          siemaInstances.forEach(function (siemaInstance) {
+            siemaInstance.resize();
+          });
+        }
+      });
     } else {
       toggleTextPsi.style.transition = 'color 0.5s';
       toggleTextLide.style.transition = 'color 0.5s';
