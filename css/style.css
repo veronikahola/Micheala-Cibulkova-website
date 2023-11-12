@@ -841,15 +841,15 @@ button {
 }
 
 .faq {
-  padding: 40px 20px;
+  padding: 0 40px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+  align-items: start;
 }
 @media screen and (min-width: 768px) {
   .faq {
     padding: 0 0 20px 0;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
-    align-items: start;
   }
 }
 .faq__question {
@@ -875,33 +875,72 @@ button {
 
 .arrow {
   position: absolute;
-  top: -100px;
+  width: 30%;
+  top: -80px;
 }
 .arrow--right {
-  right: -300px;
+  right: -60px;
 }
 .arrow--left {
-  left: -300px;
+  left: -60px;
+}
+@media screen and (min-width: 768px) {
+  .arrow {
+    top: -100px;
+    width: 40%;
+  }
+  .arrow--right {
+    right: -280px;
+  }
+  .arrow--left {
+    left: -280px;
+  }
 }
 
+.q1 {
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
 @media screen and (min-width: 768px) {
   .q1 {
     grid-column: 1/4;
     grid-row: 2/3;
   }
+}
+
+.q2 {
+  grid-column: 2/6;
+  grid-row: 3/4;
+}
+@media screen and (min-width: 768px) {
   .q2 {
     grid-column: 3/6;
     grid-row: 3/4;
   }
+}
+
+.q3 {
+  grid-column: 1/5;
+  grid-row: 4/5;
+}
+@media screen and (min-width: 768px) {
   .q3 {
     grid-column: 1/4;
     grid-row: 4/5;
   }
+}
+
+.q4 {
+  grid-column: 2/6;
+  grid-row: 5/6;
+}
+@media screen and (min-width: 768px) {
   .q4 {
     grid-column: 3/6;
     grid-row: 5/6;
   }
 }
+
 .form {
   width: 100%;
   text-align: justify;
