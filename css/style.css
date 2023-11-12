@@ -831,42 +831,13 @@ button {
   filter: url(#shadow-nabidkaLideBottom);
 }
 
-.glide {
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-@media screen and (min-width: 768px) {
-  .glide {
-    margin-bottom: 0;
-    padding-top: 0;
-  }
-}
-.glide__slide {
+.slide {
   padding: 40px;
   background-color: #F5F6F4;
   margin-bottom: 90px;
   border-radius: 10px;
   box-shadow: inset 0 0 3px #B3A8A8;
   text-align: justify;
-}
-.glide__slide--side {
-  margin-top: 40px;
-}
-@media screen and (min-width: 768px) {
-  .glide__bullets--hidden {
-    display: none;
-  }
-}
-
-.glide-second {
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-@media screen and (min-width: 768px) {
-  .glide-second {
-    margin-bottom: 0;
-    padding-top: 0;
-  }
 }
 
 @media screen and (min-width: 768px) {

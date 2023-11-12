@@ -62,45 +62,21 @@
 
 
 
-.glide {
-    margin-bottom: var.$spacer-s;
-    padding-top: var.$spacer-s;
-
-    @media screen and (min-width: 768px){
-        margin-bottom: 0;
-        padding-top: 0;
-    }
-
-
-    &__slide {
+    .slide {
         padding: var.$spacer-m;
         background-color: var.$color-white;
         margin-bottom: 90px;
         border-radius: 10px;
         box-shadow: inset 0 0 3px var.$color-light;
         text-align: justify;
-
-        &--side {
-            margin-top: var.$spacer-m;
-        }
     }
 
-    &__bullets--hidden {
-        @media screen and (min-width: 768px){
-            display: none;
-        }
-    }
-}
 
-.glide-second {
-    margin-bottom: var.$spacer-s;
-    padding-top: var.$spacer-s;
 
-    @media screen and (min-width: 768px){
-        margin-bottom: 0;
-        padding-top: 0;
-    }
-}
+
+
+
+
 
 
 
