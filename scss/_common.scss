@@ -218,39 +218,58 @@ p {
     font-family: var.$font-logo;
     color: var.$color-white;
     letter-spacing: 2px;
-    position: relative;
-    z-index: 2;
 
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        transform: scaleX(0);
-        height: 14px;
-        bottom: 6px;
-        left: 0;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-        
-    &:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+
+    @media screen and (max-width: 768px){
+
+        &--dark:hover{
+            color: #4C4245;
+        }
+
+        &--green:hover{
+            color: #616A4E;
+        }
+
+        &--pink:hover{
+            color: #995C74;
+        }
     }
 
+    @media screen and (min-width: 768px){
+        position: relative;
+        z-index: 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            transform: scaleX(0);
+            height: 14px;
+            bottom: 6px;
+            left: 0;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+            
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
 
 
-    &--dark::after{
-        background-color: #685B5E;
-    }
 
-    &--green::after{
-        background-color: #77815F;
-    }
+        &--dark::after{
+            background-color: #685B5E;
+        }
 
-    &--pink::after{
-        background-color: #AB7389;
+        &--green::after{
+            background-color: #77815F;
+        }
+
+        &--pink::after{
+            background-color: #AB7389;
+        }
     }
  
     

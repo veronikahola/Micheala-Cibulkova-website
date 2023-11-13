@@ -186,33 +186,48 @@ p {
   font-family: "Reenie Beanie", cursive;
   color: #F5F6F4;
   letter-spacing: 2px;
-  position: relative;
-  z-index: 2;
 }
-.button::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  transform: scaleX(0);
-  height: 14px;
-  bottom: 6px;
-  left: 0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+@media screen and (max-width: 768px) {
+  .button--dark:hover {
+    color: #4C4245;
+  }
+  .button--green:hover {
+    color: #616A4E;
+  }
+  .button--pink:hover {
+    color: #995C74;
+  }
 }
-.button:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.button--dark::after {
-  background-color: #685B5E;
-}
-.button--green::after {
-  background-color: #77815F;
-}
-.button--pink::after {
-  background-color: #AB7389;
+@media screen and (min-width: 768px) {
+  .button {
+    position: relative;
+    z-index: 2;
+  }
+  .button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    transform: scaleX(0);
+    height: 14px;
+    bottom: 6px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .button--dark::after {
+    background-color: #685B5E;
+  }
+  .button--green::after {
+    background-color: #77815F;
+  }
+  .button--pink::after {
+    background-color: #AB7389;
+  }
 }
 
 .menu {
@@ -313,32 +328,6 @@ p {
 .menu__item:last-child {
   border: none;
 }
-.menu__item--dark {
-  color: #685B5E;
-  color: #F5F6F4;
-}
-@media screen and (min-width: 768px) {
-  .menu__item--dark {
-    color: #685B5E;
-  }
-  .menu__item--dark:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-}
-.menu__item--dark::before {
-  content: "";
-  position: absolute;
-  width: 70%;
-  transform: scaleX(0);
-  height: 8px;
-  bottom: 48px;
-  left: 15%;
-  background-color: #D2B2BF;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-  z-index: -1;
-}
 @media screen and (max-width: 768px) {
   .menu__item:hover {
     background-color: #F5F6F4;
@@ -349,6 +338,10 @@ p {
   .menu__item {
     padding: 40px 20px;
     border: none;
+  }
+  .menu__item:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   .menu__item::before {
     content: "";
@@ -367,6 +360,20 @@ p {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+}
+.menu__item--dark {
+  color: #F5F6F4;
+}
+@media screen and (min-width: 768px) {
+  .menu__item--dark {
+    color: #685B5E;
+  }
+}
+.menu__item--dark::before {
+  background-color: #D2B2BF;
+}
+.menu__item--light::before {
+  background-color: #BB8B9E;
 }
 @media screen and (min-width: 768px) {
   .menu__item--active {
