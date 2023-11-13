@@ -4,11 +4,11 @@ module.exports = function (eleventyConfig) {
 
   // Zkopírovat css/ to _site/css/
   eleventyConfig.addPassthroughCopy("css");
-
   eleventyConfig.addPassthroughCopy("/fslightbox.js");
   eleventyConfig.addPassthroughCopy("glide.min.js");
   eleventyConfig.addPassthroughCopy("siema.min.js");
   eleventyConfig.addPassthroughCopy("reveal.js");
+  eleventyConfig.addPassthroughCopy("admin");
 
   // Zkopírovat všechny *.js soubory na stejné umístění do _site
   // eleventyConfig.addPassthroughCopy("**/*.js");

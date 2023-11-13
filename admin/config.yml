@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+collections:
+  - name: "akce"
+    label: "Akce"
+    folder: "akce"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/akce.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "akce"}
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Perex", name: "perex", widget: "string"}
+      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+      - {label: "Obsah", name: "body", widget: "markdown"}
