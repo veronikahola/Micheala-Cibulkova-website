@@ -25,7 +25,7 @@ title: Kontakt
 
 <section class="kontakt--dark container">
 
-    <form class="form" method="POST" data-netlify="true" id="myForm">
+    <form name="dotaz" class="form" action="/formular/index.html" method="POST" data-netlify="true">
         <h1 class="heading heading--unhidden"><span class="white">napište</span> <span class="pink">mi</span></h1>
 
         <div class="form__field--flex">
@@ -50,47 +50,16 @@ title: Kontakt
             <label class="form__label form__label--textarea" for="zprava">Zpráva</label>
         </div>
 
-        <button class="button--logo" type="submit" onclick="displayModal()">Odeslat</button>
+        <button class="button--logo" type="submit">Odeslat</button>
     </form>
 
 
-    <div class="overlay" id="overlay"></div>
-    <div class="modal" id="thankYouModal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <p class="heading heading-small white">odesláno!<br>Díky za dotaz</p>
-        </div>
-    </div>
 
 </section>
 
 
 
-<script>
-    function displayModal() {
-        document.getElementById('overlay').style.display = 'block';
-        document.getElementById('thankYouModal').style.display = 'block';
-    }
 
-    function closeModal() {
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('thankYouModal').style.display = 'none';
-    }
-
-    // Optional: Close the modal when clicking outside of it
-    window.addEventListener('click', function (event) {
-        if (event.target === document.getElementById('overlay')) {
-            closeModal();
-        }
-    });
-
-    // Optional: Submit the form when the modal closes
-    document.getElementById('thankYouModal').addEventListener('click', function (event) {
-        if (event.target === this) {
-            document.getElementById('myForm').submit();
-        }
-    });
-</script>
 
 
 
