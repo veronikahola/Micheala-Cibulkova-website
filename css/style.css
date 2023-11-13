@@ -104,6 +104,9 @@ p {
 .heading--white {
   color: #F5F6F4;
 }
+.heading--pink {
+  color: #BB8B9E;
+}
 @media screen and (min-width: 768px) {
   .heading--hidden {
     display: none;
@@ -177,29 +180,39 @@ p {
   transform-origin: bottom left;
 }
 
-.button--logo {
+.button {
   text-decoration: none;
   font-size: 40px;
   font-family: "Reenie Beanie", cursive;
   color: #F5F6F4;
   letter-spacing: 2px;
   position: relative;
+  z-index: 2;
 }
-.button--logo::after {
+.button::after {
   content: "";
   position: absolute;
+  z-index: -1;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
+  height: 14px;
+  bottom: 6px;
   left: 0;
-  background-color: #F5F6F4;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-.button--logo:hover::after {
+.button:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+.button--dark::after {
+  background-color: #685B5E;
+}
+.button--green::after {
+  background-color: #77815F;
+}
+.button--pink::after {
+  background-color: #AB7389;
 }
 
 .menu {
@@ -308,6 +321,10 @@ p {
   .menu__item--dark {
     color: #685B5E;
   }
+  .menu__item--dark:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 .menu__item--dark::before {
   content: "";
@@ -321,10 +338,6 @@ p {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
   z-index: -1;
-}
-.menu__item--dark:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
 @media screen and (max-width: 768px) {
   .menu__item:hover {
@@ -355,18 +368,20 @@ p {
     transform-origin: bottom left;
   }
 }
-.menu__item--active {
-  position: relative;
-}
-.menu__item--active::after {
-  content: "";
-  position: absolute;
-  bottom: 48px;
-  left: 15%;
-  width: 70%;
-  height: 8px;
-  background-color: #D2B2BF;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  .menu__item--active {
+    position: relative;
+  }
+  .menu__item--active::after {
+    content: "";
+    position: absolute;
+    bottom: 48px;
+    left: 15%;
+    width: 70%;
+    height: 8px;
+    background-color: #D2B2BF;
+    z-index: -1;
+  }
 }
 .menu__logo {
   font-family: "Reenie Beanie", cursive;
@@ -415,7 +430,7 @@ p {
 }
 .background--brown {
   background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
-  height: 100%;
+  min-height: 100vh;
 }
 
 .banner {
@@ -440,7 +455,7 @@ p {
   letter-spacing: 1px;
   grid-column: 1/3;
   grid-row: 1/2;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
 }
 @media screen and (min-width: 768px) {
   .banner__heading {
@@ -467,7 +482,7 @@ p {
 .banner__logo {
   font-family: "Reenie Beanie", cursive;
   font-size: 40px;
-  padding: 0 20px;
+  padding: 0 20px 40px 20px;
   grid-column: 1/3;
   grid-row: 3/4;
 }
@@ -484,20 +499,24 @@ p {
   color: #F6BE65;
 }
 
+.akce {
+  text-decoration: none;
+}
 .akce__content {
   color: #F5F6F4;
   text-align: center;
   padding: 0;
+  margin: 0;
 }
 .akce__text {
   background-image: linear-gradient(to top, #C398A9, #BB8B9E);
   margin: -7px 0 0 0;
-  padding: 0 40px 40px 40px;
+  padding: 40px 20px 40px 20px;
   font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .akce__text {
-    font-size: 16px;
+    padding: 40px 20px 80px 20px;
   }
 }
 .akce__heading {
@@ -515,11 +534,45 @@ p {
 .akce__wave {
   filter: url(#shadow-akce);
 }
+.akce__hover:hover .akce__heading {
+  color: white;
+  transition: 0.5s;
+}
+.akce__hover:hover .akce__perex {
+  color: white;
+  transition: 0.5s;
+}
+
+.article__background {
+  background: linear-gradient(to top, #78686C, #574C4F);
+}
+@media screen and (min-width: 768px) {
+  .article__background {
+    min-height: 80vh;
+  }
+}
+.article__container {
+  padding: 0 20px 80px 20px;
+}
+@media screen and (min-width: 768px) {
+  .article__container {
+    padding: 40px 0 80px 0;
+  }
+}
+.article__content {
+  margin: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .article__content {
+    margin: 40px 0;
+  }
+}
 
 .footer {
   padding: 0;
   background: linear-gradient(to bottom, #78686C, #78686C, #625559);
   max-height: 30vh;
+  margin-top: -7px;
 }
 .footer__content {
   display: grid;
@@ -527,7 +580,6 @@ p {
   grid-template-rows: 1fr;
   gap: 20px;
   position: relative;
-  margin-top: -8px;
   z-index: 1;
 }
 .footer__icons {
@@ -763,7 +815,7 @@ button {
 }
 .reveal--opacity {
   transform: translateY(0);
-  transition: 2s all ease;
+  transition: 0.5s all ease;
 }
 @media screen and (min-width: 768px) {
   .reveal--phone {

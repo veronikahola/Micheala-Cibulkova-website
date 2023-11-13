@@ -114,6 +114,11 @@
 
             @media screen and (min-width: 768px) {
                 color: var.$color-brown;
+
+                &:hover::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
             }
 
             &::before {
@@ -130,10 +135,7 @@
                 z-index: -1;
             }
 
-            &:hover::before {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
+            
 
         }
         
@@ -171,17 +173,19 @@
 
 
         &--active {
-            position: relative;
+            @media screen and (min-width: 768px) {
+                position: relative;
 
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: var.$spacer-m + 8px;
-                left: 15%;
-                width: 70%;
-                height: 8px;
-                background-color: #D2B2BF;
-                z-index: -1;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: var.$spacer-m + 8px;
+                    left: 15%;
+                    width: 70%;
+                    height: 8px;
+                    background-color: #D2B2BF;
+                    z-index: -1;
+                }
             }
         }
     

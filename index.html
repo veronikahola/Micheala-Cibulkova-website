@@ -82,8 +82,9 @@
 
 
         <!-- nová sekce se scrollováním -->
-        <section class="akce reveal reveal--opacity">
-            <div class="akce__content akce">
+        <section class="akce">
+            {% for prispevek in collections.akce | reverse | limit(1) %}
+            <div class="akce__hover"><a href="{{ prispevek.url }}"  class="akce__content akce">
 
                 <svg class="akce__wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 180" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(187, 139, 158, 1)" offset="0%"></stop><stop stop-color="rgba(172, 114, 137, 1)" offset="100%"></stop></linearGradient></defs>
@@ -94,32 +95,26 @@
                 </svg>
 
 
+                
+
                 <div class="akce__text">
-                    <p class="akce__heading">AKCE podzimní focení!</p>
-                    <p class="plain-text"> Far far away, behind the word mountains, far from the countries.</p>
+                    <p class="akce__heading reveal reveal--opacity">{{ prispevek.data.title }}</p>
+                    <p class="akce__perex plain-text reveal reveal--opacity">{{ prispevek.data.perex }}</p>
                 </div>
-            </div>
+
+                
+
+
+            </a></div>
+            {% endfor %}
 
         </section>
-      
-
-
-
-
-
 
     </div>
 
     <script src="/reveal.js"></script>
-   
-
-
 
 
 </body>
-
-
-
-
-
 </html> 
+

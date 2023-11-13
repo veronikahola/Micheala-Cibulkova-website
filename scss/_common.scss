@@ -6,9 +6,11 @@ body {
     color: var.$color-white;
     margin: 0;
 
+
     position: relative;
     background: radial-gradient(circle at 44% 59%, #FFFFFF 0%, #F5F6F4 21%, #F5F6F4 21%, #F5F6F4 75%, #EBEDE9 100%);
 }
+
 
 body::after {
     content: "";
@@ -41,6 +43,7 @@ p {
     }
 
     &--small {
+        
         @media screen and (min-width: 768px){
             font-size: var.$font-size-xs;
         }
@@ -77,6 +80,7 @@ p {
     color: var.$color-white;
 }
 
+
 .callout {
     font-family: var.$font-heading;
     font-size: 25px;
@@ -111,6 +115,10 @@ p {
 
     &--white {
         color: var.$color-white;
+    }
+
+    &--pink {
+        color: var.$color-second;
     }
 
     &--hidden {
@@ -204,64 +212,49 @@ p {
 }
 
 
-
-.button--logo {
+.button {
     text-decoration: none;
     font-size: var.$font-size-l;
     font-family: var.$font-logo;
     color: var.$color-white;
     letter-spacing: 2px;
     position: relative;
+    z-index: 2;
 
     &::after {
         content: '';
         position: absolute;
+        z-index: -1;
         width: 100%;
         transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
+        height: 14px;
+        bottom: 6px;
         left: 0;
-        background-color: var.$color-white;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
-      
+        
     &:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+
+
+    &--dark::after{
+        background-color: #685B5E;
+    }
+
+    &--green::after{
+        background-color: #77815F;
+    }
+
+    &--pink::after{
+        background-color: #AB7389;
+    }
+ 
+    
+
 }
 
 
-// .link {
-//     font-family: var.$font-heading;
-//     font-size: var.$font-size-l;
-//     color: var.$color-brown;
-//     letter-spacing: 2px;
-//     line-height: 0.5;
-//     margin: 0;
-//     text-decoration: none;
-//     position: relative;
-
-//     @media screen and (min-width: 768px){
-//         font-size: var.$font-size-xl;
-//     }
-
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         width: 100%;
-//         transform: scaleX(0);
-//         height: 3px;
-//         bottom: 12px;
-//         left: 0;
-//         background-color: var.$color-first;
-//         transform-origin: bottom right;
-//         transition: transform 0.25s ease-out;
-//     }
-      
-//     &:hover::after {
-//         transform: scaleX(1);
-//         transform-origin: bottom left;
-//     }
-// }

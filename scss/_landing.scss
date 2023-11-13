@@ -5,8 +5,9 @@
 .background {
     &--brown {
         background: radial-gradient(circle at 70% 70%, #574C4E 0%, #574C4E 28%, #6D5F62 50%, #8D7C80 100%);
-        height: 100%;
+        min-height: 100vh;
     }
+    
 }
 
 .banner {
@@ -31,7 +32,7 @@
         letter-spacing: 1px;
         grid-column: 1/3;
         grid-row: 1/2;
-        padding: 0 var.$spacer-s;
+        padding: var.$spacer-s var.$spacer-s 0 var.$spacer-s;
 
         @media screen and (min-width: 768px){
             font-size: var.$font-size-xl;
@@ -59,7 +60,7 @@
     &__logo {
         font-family: var.$font-logo;
         font-size: var.$font-size-l;
-        padding: 0 var.$spacer-s;
+        padding: 0 var.$spacer-s var.$spacer-m var.$spacer-s;
         grid-column: 1/3;
         grid-row: 3/4;
 
@@ -82,22 +83,24 @@
 
 
 .akce {
+    text-decoration: none;
     
     &__content {
         color: var.$color-white;
         text-align: center;
         padding: 0;
+        margin: 0;
         
     }
 
     &__text {
         background-image: linear-gradient(to top, #C398A9, #BB8B9E);
         margin: -7px 0 0 0;
-        padding: 0 var.$spacer-m var.$spacer-m var.$spacer-m;
+        padding: var.$spacer-m var.$spacer-s var.$spacer-m var.$spacer-s;
         font-size: var.$font-size-xs;
 
         @media screen and (min-width: 768px){
-            font-size: var.$font-size-s;
+            padding: var.$spacer-m var.$spacer-s var.$spacer-l var.$spacer-s;
         }
     }
 
@@ -116,83 +119,47 @@
     &__wave {
         filter: url(#shadow-akce);
     }
+
+    &__hover {
+        &:hover .akce__heading {
+            color: white;
+            transition: 0.5s;
+        }
+
+        &:hover .akce__perex {
+            color: white;
+            transition: 0.5s;
+        }
+    }
 }
 
 
+// akce - článek
 
+.article {
 
-// původní hidden sekce
-// .hidden {
-//     position: relative;
-//     text-align: center;
+    &__background {
+        background: linear-gradient(to top, #78686C, #574C4F);
+        @media screen and (min-width: 768px){
+            min-height: 80vh;
+        }
+    }
 
-//     @media screen and (min-width: 768px){
-//         overflow: hidden;
-//     }
-    
+    &__container {
+        padding: 0 var.$spacer-s var.$spacer-l var.$spacer-s;
 
-//     &__content {
-//         color: var.$color-white;
-//         text-align: center;
-//         top: 100%;
-//         width: 100%;
-        
+        @media screen and (min-width: 768px){
+            padding: var.$spacer-m 0 var.$spacer-l 0;
+        }
+    }
 
-//         @media screen and (min-width: 768px){
-//             transition: transform 0.7s;
-//             padding-top: var.$spacer-m;
-//             margin-top: 5px;
-//             position: absolute;
-//         }
-//     }
-
-
-//     @media screen and (min-width: 768px){
-//         &:hover .hidden__content {
-//             transform: translateY(-100%);
-//         }
-//     }
-
-
-//     &__mark {
-//         display: none;
-//         font-family: var.$font-logo;
-//         font-size: var.$font-size-l;
-//         color: var.$color-second;
-//         padding: var.$spacer-l 0;
-//         margin-bottom: var.$spacer-xl;
-//         margin-top: var.$spacer-l;
-
-//         @media screen and (min-width: 768px){
-//             display: block;
-//         }
-//     }
-
-//     &__text {
-//         background-image: linear-gradient(to top, #C398A9,  var.$color-second);
-//         // background-color: var.$color-second;
-//         margin: -7px 0 0 0;
-//         padding: 0 var.$spacer-m var.$spacer-l var.$spacer-m;
-//         font-size: var.$font-size-xs;
-
-//         @media screen and (min-width: 768px){
-//             font-size: var.$font-size-s;
-//         }
-
-
-//         &--heading {
-//             font-family: var.$font-heading;
-//             font-size: var.$font-size-m;
-//             color: var.$color-brown;
-//             letter-spacing: 1px;
-//             margin: 0;
-
-//             @media screen and (min-width: 768px){
-//                 font-size: var.$font-size-l;
-//             }
-//         }
-//     }
-// }
+    &__content {
+        margin: var.$spacer-s 0;
+        @media screen and (min-width: 768px){
+            margin: var.$spacer-m 0;
+        }
+    }
+}
 
 
 

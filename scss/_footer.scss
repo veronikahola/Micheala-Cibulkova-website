@@ -7,6 +7,7 @@
     padding: 0;
     background: linear-gradient(to bottom, #78686C, #78686C, #625559);
     max-height: 30vh;
+    margin-top: -7px;
 
 
     &__content {
@@ -15,7 +16,6 @@
         grid-template-rows: 1fr;
         gap: var.$spacer-s;
         position: relative;
-        margin-top: -8px;
         z-index: 1;
     }
 
