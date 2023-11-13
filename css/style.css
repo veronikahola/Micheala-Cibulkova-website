@@ -1072,10 +1072,6 @@ button {
   color: white;
 }
 
-.modal-content {
-  text-align: center;
-}
-
 .close {
   position: absolute;
   top: 10px;
