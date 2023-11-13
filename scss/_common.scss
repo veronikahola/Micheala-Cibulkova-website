@@ -137,6 +137,10 @@ p {
     &--margin {
         margin-top: var.$spacer-m;
     }
+
+    &--left {
+        text-align: left;
+    }
 }
 
 

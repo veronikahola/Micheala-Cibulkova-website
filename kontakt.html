@@ -23,9 +23,9 @@ title: Kontakt
 </svg>
 
 
-<section class="kontakt--dark">
-    
-    <form class="form" action="http://formular.itgirls.cz" method="post">
+<section class="kontakt--dark container">
+
+    <form class="form" netlify>
         <h1 class="heading heading--unhidden"><span class="white">napište</span> <span class="pink">mi</span></h1>
 
         <div class="form__field--flex">
@@ -49,10 +49,93 @@ title: Kontakt
             <textarea class="form__input" name="zprava" id="zprava" cols="30" rows="10" placeholder=" "></textarea>
             <label class="form__label form__label--textarea" for="zprava">Zpráva</label>
         </div>
-        
-        <button class="button--logo">Odeslat</button>
 
+        <button class="button--logo" type="submit" onclick="displayModal()">Odeslat</button>
     </form>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="thankYouModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <p class="heading heading-small white">odesláno!<br>Díky za dotaz</p>
+        </div>
+    </div>
+
+
+
+
+    
+    <script>
+        // Function to show the modal
+        function displayModal() {
+            document.getElementById('thankYouModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.body.classList.add('blur');
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('thankYouModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            document.body.classList.remove('blur');
+        }
+    </script>
+
 </section>
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    function displayModal() {
+        document.getElementById('thankYouModal').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+        document.body.classList.add('blur');
+    }
+
+    function closeModal() {
+        document.getElementById('thankYouModal').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+        document.body.classList.remove('blur');
+    }
+
+    document.querySelector('.form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Create a FormData object from the form
+        const formData = new FormData(this);
+
+        // Send a POST request using Axios
+        axios.post('https://submit-form.com/wwHYWbid9', formData)
+            .then(response => {
+                // Handle the response
+                console.log(response.data);
+                if (response.data.success) {
+                    displayModal();
+                } else {
+                    console.error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error submitting form:', error);
+            });
+    });
+
+    document.getElementById('overlay').addEventListener('click', function (event) {
+        if (event.target === this) {
+            closeModal();
+        }
+    });
+</script> -->
+
+
+veruhol1@gmail.com
 
 
