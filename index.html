@@ -34,11 +34,11 @@
         
         
                 <div class="menu__list">
-                    <a class="menu__item" href="/omne/">o mně</a>
-                    <a class="menu__item" href="/portfolio/index.html">portfolio</a>
+                    <a class="menu__item {{ 'menu__item--active' if page.fileSlug === 'omne' }}" href="/omne/">o mně</a>
+                    <a class="menu__item {{ 'menu__item--active' if page.fileSlug === 'portfolio' }}" href="/portfolio/index.html">portfolio</a>
                     <a class="menu__logo logo" href="/">MC</a>
-                    <a class="menu__item" href="/nabidka/index.html">nabídka</a>
-                    <a class="menu__item" href="/kontakt/index.html">kontakt</a>
+                    <a class="menu__item {{ 'menu__item--active' if page.fileSlug === 'nabidka' }}" href="/nabidka/index.html">nabídka</a>
+                    <a class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/index.html">kontakt</a>
                 </div>
 
                 

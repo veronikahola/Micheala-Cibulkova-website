@@ -188,12 +188,13 @@ p {
         position: absolute;
         width: 100%;
         transform: scaleX(0);
-        height: 1.5px;
-        bottom: 0;
+        height: 8px;
+        bottom: 4px;
         left: 0;
-        background-color: var.$color-light;
+        background-color: #E8D9DF;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
+        z-index: -1;
     }
     
     &:hover::after {

@@ -11,11 +11,11 @@
 
 
     <div class="menu__list">
-        <a class="menu__item menu__item--dark" href="/omne/index.html">o mně</a>
-        <a class="menu__item menu__item--dark" href="/portfolio/index.html">portfolio</a>
+        <a class="menu__item menu__item--dark {{ 'menu__item--active' if page.fileSlug === 'omne' }}" href="/omne/index.html">o mně</a>
+        <a class="menu__item menu__item--dark {{ 'menu__item--active' if page.fileSlug === 'portfolio' }}" href="/portfolio/index.html">portfolio</a>
         <a class="menu__logo logo menu__logo--dark" href="/">Michaela Cibulková</a>
-        <a class="menu__item menu__item--dark" href="/nabidka/index.html">nabídka</a>
-        <a class="menu__item menu__item--dark" href="/kontakt/index.html">kontakt</a>
+        <a class="menu__item menu__item--dark {{ 'menu__item--active' if page.fileSlug === 'nabidka' }}" href="/nabidka/index.html">nabídka</a>
+        <a class="menu__item menu__item--dark {{ 'menu__item--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/index.html">kontakt</a>
     </div>
 </header>
 

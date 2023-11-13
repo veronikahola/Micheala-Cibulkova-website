@@ -115,6 +115,26 @@
             @media screen and (min-width: 768px) {
                 color: var.$color-brown;
             }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 70%;
+                transform: scaleX(0);
+                height: 8px;
+                bottom: var.$spacer-m + 8px;
+                left: 15%;
+                background-color: #D2B2BF;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
         }
         
 
@@ -146,6 +166,22 @@
             &:hover::before {
                 transform: scaleX(1);
                 transform-origin: bottom left;
+            }
+        }
+
+
+        &--active {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: var.$spacer-m + 8px;
+                left: 15%;
+                width: 70%;
+                height: 8px;
+                background-color: #D2B2BF;
+                z-index: -1;
             }
         }
     
