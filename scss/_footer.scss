@@ -30,7 +30,11 @@
         align-self: end;
         padding: 0 0 var.$spacer-s 0;
         width: 100%;
-       
+    }
+
+    &__icon {
+        width: 32px;
+        transition: 0.3s ease-in-out;
     }
 
     &__img {
@@ -38,6 +42,10 @@
         grid-column: 2/3;
         grid-row: 1/2;
         
+    }
+
+    &__link:hover .footer__icon {
+        transform: scale(1.2);
     }
 
     &__text {

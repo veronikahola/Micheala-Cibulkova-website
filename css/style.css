@@ -600,10 +600,17 @@ p {
   padding: 0 0 20px 0;
   width: 100%;
 }
+.footer__icon {
+  width: 32px;
+  transition: 0.3s ease-in-out;
+}
 .footer__img {
   height: 20vh;
   grid-column: 2/3;
   grid-row: 1/2;
+}
+.footer__link:hover .footer__icon {
+  transform: scale(1.2);
 }
 .footer__text {
   font-family: "Reenie Beanie", cursive;
