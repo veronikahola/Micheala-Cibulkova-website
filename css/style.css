@@ -848,6 +848,34 @@ button {
   transform: translateX(0);
 }
 
+.banner__img:hover .eye {
+  fill: pink;
+}
+
+.eye {
+  transition: transform 0.3s ease-in-out;
+}
+
+.eye:hover {
+  animation: blink 1s infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes blink {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+.eye {
+  fill: pink;
+}
+
+.barva {
+  scale: 5;
+}
+
 .gallery {
   max-width: 1300px;
   margin: 0 auto;
