@@ -897,9 +897,10 @@ button {
 }
 .gallery__container {
   overflow: hidden;
-}
-.gallery__container:nth-child(2n) {
   grid-row: span 2;
+}
+.gallery .wide {
+  grid-row: span 1;
 }
 .gallery__img {
   width: 100%;
