@@ -34,6 +34,10 @@
             margin-bottom: var.$spacer-m;
         }
 
+        &--radio {
+            margin: var.$spacer-xs 0 var.$spacer-s var.$spacer-xs;
+        }
+
 
         &:hover .form__label,
         &:focus .form__label {
@@ -85,6 +89,19 @@
 
         &--textarea {
             top: 13%;
+        }
+
+        &--radio {
+            color: var.$color-light;
+            font-size: var.$font-size-xs;
+            padding-left: var.$spacer-xs;
+
+            &Heading {
+                color: var.$color-light;
+                font-size: var.$font-size-xs;
+                padding-left: var.$spacer-xs;
+                margin-top: var.$spacer-s;
+            }
         }
     }
 

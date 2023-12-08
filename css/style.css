@@ -1099,6 +1099,9 @@ button {
 .form__field--margin {
   margin-bottom: 40px;
 }
+.form__field--radio {
+  margin: 12px 0 20px 12px;
+}
 .form__field:hover .form__label, .form__field:focus .form__label {
   transform: translateY(-10px);
 }
@@ -1137,6 +1140,17 @@ button {
 }
 .form__label--textarea {
   top: 13%;
+}
+.form__label--radio {
+  color: #B3A8A8;
+  font-size: 12px;
+  padding-left: 12px;
+}
+.form__label--radioHeading {
+  color: #B3A8A8;
+  font-size: 12px;
+  padding-left: 12px;
+  margin-top: 20px;
 }
 .form__input {
   border: 1px solid #B3A8A8;
