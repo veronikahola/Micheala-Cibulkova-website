@@ -7,6 +7,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("fslightbox.js");
   eleventyConfig.addPassthroughCopy("siema.min.js");
   eleventyConfig.addPassthroughCopy("reveal.js");
+  eleventyConfig.addPassthroughCopy("toggleportfolio.js");
+  eleventyConfig.addPassthroughCopy("togglenabidka.js");
   eleventyConfig.addPassthroughCopy("admin");
 
   // Zkopírovat všechny *.js soubory na stejné umístění do _site

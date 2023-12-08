@@ -1,4 +1,3 @@
-// script pro togle
 document.addEventListener('DOMContentLoaded', function() {
     const toggleCheckbox = document.querySelector('.toggle__checkbox');
     const toggleTextPsi = document.querySelector('.toggle__text--psi');
@@ -47,26 +46,3 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleCheckbox.checked = false;
     
 });
-
-
-
-// script pro siemu
-const siemas = document.querySelectorAll('.siema');
-
-    for (const siema of siemas) {
-        let perPageValue = 1;  // Default value
-    
-    if (siema.classList.contains('siema-3-slides')) {
-        perPageValue = 3;
-    } else if (siema.classList.contains('siema-2-slides')) {
-        perPageValue = 2;
-    }
-    
-    new Siema({
-        selector: siema,
-        perPage: {
-        100: 1,
-        768: perPageValue,
-        },
-    });
-    }

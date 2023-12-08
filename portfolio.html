@@ -3,56 +3,15 @@ layout: layouts/main-template.njk
 title: Portfolio
 ---
 
-<!-- změna barvy textu a display gallerie -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleCheckbox = document.querySelector('.toggle__checkbox');
-        const toggleTextPsi = document.querySelector('.toggle__text--psi');
-        const toggleTextLide = document.querySelector('.toggle__text--lide');
-
-        const galleryPsi = document.querySelector('.gallery--psi');
-        const galleryLide = document.querySelector('.gallery--lide');
-
-        
-
-        toggleCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                toggleTextPsi.style.transition = 'color 0.5s';
-                toggleTextLide.style.transition = 'color 0.5s';
-            
-                toggleTextPsi.style.color = '#B3A8A8';
-                toggleTextLide.style.color = '#685B5E';
-                galleryPsi.style.display = 'none';
-                galleryLide.style.display = 'grid';
-            } else {
-                toggleTextPsi.style.transition = 'color 0.5s';
-                toggleTextLide.style.transition = 'color 0.5s';
-                
-                toggleTextPsi.style.color = '#685B5E';
-                toggleTextLide.style.color = '#B3A8A8';
-                galleryPsi.style.display = 'grid';
-                galleryLide.style.display = 'none';
-            }
-        });
-
-        toggleTextPsi.addEventListener('click', function() {
-            toggleCheckbox.checked = false;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-
-        toggleTextLide.addEventListener('click', function() {
-            toggleCheckbox.checked = true;
-            toggleCheckbox.dispatchEvent(new Event('change'));
-        });
-        
-    });
-</script>
-
 
 
 <div class="wrapper">
-    <h1 class="heading heading--hidden">portfolio </h1>
-    <p class="plain-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove at the coast of the Semantics, a large language ocean. A small river named Duden flows by place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    <h1 class="heading heading--hidden">portfolio</h1>
+    <p class="plain-text">Zde si můžete udělat představu, jak vypadá má tvorba. V psí sekci najdete ukázku
+        různých fotografií vás a vašich čtyřnohých parťáků, v sekci lidé zase svatební a předsvatební fotografie.</p><br>
+
+    <p class="plain-text">Prosím, nebojte se napsat vaše přání nebo konkrétní představu, věřím, že společně připravíme focení <span class="callout">přesně podle vašich představ!</span></p>
+        
 </div>
 
 
@@ -98,15 +57,15 @@ title: Portfolio
 <!-- galerie psi -->
 <section class="gallery gallery--psi">
 
-    <div class="gallery__container reveal reveal--phone wide">
+    <div class="gallery__container  wide">
         <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/pp_3.jpg"><img class="gallery__img" src="/images/portfolioPsi/nahledy/pp_tiny_3.jpg" alt="galerie"></a>
     </div>
 
-    <div class="gallery__container ">
+    <div class="gallery__container reveal reveal--phone">
         <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/pp_1.jpg"><img class="gallery__img" src="/images/portfolioPsi/nahledy/pp_tiny_1.jpg" alt="galerie"></a>
     </div>
 
-    <div class="gallery__container reveal reveal--phoe wide">
+    <div class="gallery__container reveal reveal--phone wide">
         <a data-fslightbox="first-lightbox" href="/images/portfolioPsi/pp_2.jpg"><img class="gallery__img" src="/images/portfolioPsi/nahledy/pp_tiny_2.jpg" alt="galerie"></a>
     </div>
 
@@ -352,14 +311,14 @@ title: Portfolio
 
 <!-- odkazy -->
 <div class="wrapper">
-    <div class="reveal">
+    <div class="reveal portfolio__links">
         <h1 class="heading heading--center">chcete vidět <span class="yellow">více</span> fotek?</h1>
-        <p class="plain-text plain-text--center">Další fotky najdete na <a class="plain-text plain-text--light hover-underline-animation" href="https://www.instagram.com/cibulkovafoto/?hl=en">@cibulkovafoto</a></p>
+        <p class="plain-text plain-text--center">najdete je na instagramu <a class="plain-text plain-text--light hover-underline-animation" href="https://www.instagram.com/cibulkovafoto/?hl=en">@cibulkovafoto</a></p>
     </div>
 
-    <div class="reveal">
-        <h1 class="heading heading--center heading--margin">nebo si rovnou <span class="yellow">domluvit focení</span>?</h1>
-        <p class="plain-text plain-text--center">Podívejte se na <a class="plain-text plain-text--light hover-underline-animation" href="/nabidka/index.html">nabídku</a></p>
+    <div class="reveal portfolio__links">
+        <h1 class="heading heading--center">nebo si rovnou <span class="yellow">domluvit focení</span>?</h1>
+        <p class="plain-text plain-text--center">podívejte se na <a class="plain-text plain-text--light hover-underline-animation" href="/nabidka/index.html">nabídku</a>, nebo si rovnou <a class="plain-text plain-text--light hover-underline-animation" href="/kontakt/index.html">napište</a> o termín</p>
     </div>
 </div>
 
@@ -368,6 +327,9 @@ title: Portfolio
 
 <script src="/fslightbox.js"></script>
 <script src="/reveal.js"></script>
+<script src="/toggleportfolio.js"></script>
+
+
 
 <script>
     fsLightboxInstances["first-lightbox"].props.onOpen = function () {
