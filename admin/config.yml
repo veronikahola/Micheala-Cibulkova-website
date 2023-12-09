@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "images/uploads"
+media_folder: "images/uploades"
 collections:
   - name: "akce"
     label: "Akce"
@@ -13,5 +13,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "hidden", default: "akce"}
       - {label: "Titulek", name: "title", widget: "string"}
       - {label: "Perex", name: "perex", widget: "string"}
-      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+      - {label: "Obrázek 1", name: "foto1", widget: "image", required: false }
+      - {label: "Obrázek 2", name: "foto2", widget: "image", required: false }
+      - {label: "Obrázek 3", name: "foto3", widget: "image", required: false }
       - {label: "Obsah", name: "body", widget: "markdown"}

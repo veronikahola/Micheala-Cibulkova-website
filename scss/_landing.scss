@@ -159,6 +159,28 @@
             margin: var.$spacer-m 0;
         }
     }
+
+    &__images {
+        margin: var.$spacer-m 0;
+
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex: 1 1 30%;
+            gap: var.$spacer-xs;
+            height: 170px;
+        }
+
+        &-flex {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        
+    }
+
+    &__img {
+        width: 100%;        
+    }
 }
 
 
