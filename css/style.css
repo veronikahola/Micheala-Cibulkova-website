@@ -587,7 +587,7 @@ p {
   .article__images {
     display: flex;
     flex: 1 1 30%;
-    gap: 12px;
+    gap: 4px;
     height: 170px;
   }
 }
@@ -597,6 +597,10 @@ p {
 }
 .article__img {
   width: 100%;
+  transition: transform 0.5s;
+}
+.article__img:hover {
+  transform: scale(1.05);
 }
 
 .footer {

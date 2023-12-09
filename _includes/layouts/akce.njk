@@ -65,10 +65,14 @@
                 </div>
 
                 <div class="article__images">
-                    <div class="article__images-flex"><img class="article__img" src="/images/uploades/{{ foto1 }}" alt="obrázek ke článku"></div>
-                    <div class="article__images-flex"><img class="article__img" src="/images/uploades/{{ foto2 }}" alt="obrázek ke článku"></div>
-                    <div class="article__images-flex"><img class="article__img" src="/images/uploades/{{ foto3 }}" alt="obrázek ke článku"></div>
                     
+                    
+
+                    <a data-fslightbox="akce-lightbox" class="article__images-flex" href="/images/uploades/{{ foto1 }}"><img class="article__img" src="/images/uploades/{{ foto1 }}" alt="obrázek ke článku"></a>
+
+                    <a data-fslightbox="akce-lightbox" class="article__images-flex" href="/images/uploades/{{ foto2 }}"><img class="article__img" src="/images/uploades/{{ foto2 }}" alt="obrázek ke článku"></a>
+
+                    <a data-fslightbox="akce-lightbox" class="article__images-flex" href="/images/uploades/{{ foto3 }}"><img class="article__img" src="/images/uploades/{{ foto3 }}" alt="obrázek ke článku"></a>
                     
                     
                 </div>
@@ -85,6 +89,18 @@
 
 <!-- vložení footeru -->
 {% include "partials/footer-omne.njk" %} 
+
+
+
+
+<script src="/fslightbox.js"></script>
+<script src="/reveal.js"></script>
+
+<script>
+    fsLightboxInstances["akce-lightbox"].props.onOpen = function () {
+        console.log("The akce lightbox has opened.");
+    }
+</script>
 
 
 </body>
