@@ -38,7 +38,7 @@
             font-size: var.$font-size-xl;
             grid-column: 2/3;
             grid-row: 3/4;
-            padding: 0 0 var.$spacer-m var.$spacer-m;
+            padding: 0 0 var.$spacer-l var.$spacer-m;
         }
     }
 
@@ -52,7 +52,7 @@
         @media screen and (min-width: 768px){
             grid-column: 1/2;
             grid-row: 1/4;
-            width: 70%;
+            width: 100%;
         }
     }
 
