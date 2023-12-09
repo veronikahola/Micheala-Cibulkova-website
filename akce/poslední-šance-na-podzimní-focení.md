@@ -1,8 +1,11 @@
 ---
 layout: layouts/akce.njk
 tags: akce
-title: Poslední šance na podzimní focení
-perex: Content fetched in the admin UI matches the content in the repository,
-  which may be different from your locally running site.
+title: Zimní focení
+perex: Od prosince do února nabízím termíny zimního focení!
 ---
-Note: No matter where you access Decap CMS — whether running locally, in a staging environment, or in your published site — it always fetches and commits files in your hosted repository (for example, on GitHub), on the branch you configured in your Decap CMS config.yml file.
+Focení probíhá jak v přírodě, tak i ve městě při večerním městském osvětlení - je jen na vás, co si vyberete. V zimním čase je možné rezervovat ranní i odpolední termíny, ranní focení
+probíhá od 8:00, odpolední od 14:30.
+
+
+V zimě je jedinečná možnost zachytit svého chlupatého parťáka při hrách ve sněhu, nebo i ve Vánoční městské atmosféře. Využijte kouzlo zimních měsíců a nechce si vytvořit jedinečné vzpomínky.

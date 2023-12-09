@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #F5F6F4;
@@ -71,7 +72,7 @@ p {
 .callout {
   font-family: "Jomhuria", serif;
   font-size: 25px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 0.5;
 }
 @media screen and (min-width: 768px) {
@@ -84,9 +85,14 @@ p {
   font-family: "Jomhuria", serif;
   font-size: 40px;
   color: #685B5E;
-  letter-spacing: 2px;
-  line-height: 0.5;
-  margin: 0;
+  letter-spacing: 1px;
+  line-height: 0.8;
+  margin: 0 0 4px 0;
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    font-weight: 100;
+  }
 }
 @media screen and (min-width: 768px) {
   .heading {
@@ -644,6 +650,7 @@ p {
     align-items: center;
     justify-items: center;
     padding-bottom: 0;
+    margin-bottom: 40px;
   }
 }
 .omne__img {
@@ -963,14 +970,29 @@ button {
 .nabidkaLideBottom {
   filter: url(#shadow-nabidkaLideBottom);
 }
+.nabidka__lide-bottom-text {
+  margin: 80px auto;
+}
 
 .slide {
   padding: 40px;
   background-color: #F5F6F4;
-  margin: 40px 12px 80px 12px;
+  margin: 80px 12px 80px 12px;
   border-radius: 10px;
   box-shadow: inset 0 0 3px #B3A8A8;
   text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  .slide--center {
+    margin-top: 44px;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .siema {
+    pointer-events: none;
+  }
 }
 
 .price {
@@ -987,25 +1009,33 @@ ul {
 }
 
 li {
-  list-style-type: "-";
+  list-style-type: "·";
   padding-left: 10px;
+  line-height: 2;
 }
 
 .faq {
-  padding: 0 40px 20px 40px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
-  align-items: start;
+  margin: 80px auto 120px auto;
 }
 @media screen and (min-width: 768px) {
   .faq {
-    padding: 0 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.3fr repeat(4, auto);
+    align-items: start;
   }
 }
 .faq__question {
   padding-bottom: 80px;
   position: relative;
+}
+.faq__question:last-child {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .faq__question {
+    padding-bottom: 120px;
+  }
 }
 .faq__hand {
   display: none;
@@ -1025,18 +1055,12 @@ li {
 }
 
 .arrow {
-  position: absolute;
-  width: 30%;
-  top: -80px;
-}
-.arrow--right {
-  right: -60px;
-}
-.arrow--left {
-  left: -60px;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .arrow {
+    position: absolute;
+    display: block;
     width: 40%;
   }
   .arrow--right {
@@ -1045,14 +1069,10 @@ li {
   }
   .arrow--left {
     left: -280px;
-    top: -60px;
+    top: -100px;
   }
 }
 
-.q1 {
-  grid-column: 1/5;
-  grid-row: 2/3;
-}
 @media screen and (min-width: 768px) {
   .q1 {
     grid-column: 1/4;
@@ -1060,10 +1080,6 @@ li {
   }
 }
 
-.q2 {
-  grid-column: 2/6;
-  grid-row: 3/4;
-}
 @media screen and (min-width: 768px) {
   .q2 {
     grid-column: 3/6;
@@ -1071,10 +1087,6 @@ li {
   }
 }
 
-.q3 {
-  grid-column: 1/5;
-  grid-row: 4/5;
-}
 @media screen and (min-width: 768px) {
   .q3 {
     grid-column: 1/4;
@@ -1082,10 +1094,6 @@ li {
   }
 }
 
-.q4 {
-  grid-column: 2/6;
-  grid-row: 5/6;
-}
 @media screen and (min-width: 768px) {
   .q4 {
     grid-column: 3/6;

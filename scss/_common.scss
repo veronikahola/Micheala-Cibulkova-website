@@ -84,7 +84,7 @@ p {
 .callout {
     font-family: var.$font-heading;
     font-size: 25px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     line-height: 0.5;
 
     @media screen and (min-width: 768px){
@@ -97,9 +97,13 @@ p {
     font-family: var.$font-heading;
     font-size: var.$font-size-l;
     color: var.$color-brown;
-    letter-spacing: 2px;
-    line-height: 0.5;
-    margin: 0;
+    letter-spacing: 1px;
+    line-height: 0.8;
+    margin: 0 0 4px 0;
+
+    @media screen and (max-width: 768px){
+        font-weight: 100;
+    }
 
     @media screen and (min-width: 768px){
         font-size: var.$font-size-xl;
