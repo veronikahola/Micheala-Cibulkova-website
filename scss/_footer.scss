@@ -17,6 +17,10 @@
         gap: var.$spacer-s;
         position: relative;
         z-index: 1;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }        
     }
 
     &__icons {

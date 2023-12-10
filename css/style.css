@@ -617,6 +617,11 @@ p {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .footer__icons {
   display: flex;
   justify-content: flex-end;
