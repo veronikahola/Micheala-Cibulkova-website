@@ -27,28 +27,31 @@
     &__img {
         border-radius: 50%;
         width: 75%;
-        border: 6px solid var.$color-light;
+        border: 6px solid #D9D9D9;
         margin-bottom: var.$spacer-m;
         transition: transform 0.4s;
         
 
-        &--reverse {
-            margin-top: var.$spacer-s;
-        }
+        
 
         @media screen and (min-width: 768px){
             grid-column: 2/3;
             grid-row: 1/2;
-            border: 8px solid var.$color-light;
+            border: 8px solid #D9D9D9;
             margin: 0;
-
-            &:hover {
-                transform: scale(0.95);
-            }
 
             &--reverse {
                 grid-column: 1/2;
                 margin-top: 0;
+            }
+        }
+
+        &--reverse {
+            margin-top: var.$spacer-s;
+            border-color: #685B5E;
+
+            @media screen and (min-width: 768px){
+                border-color: #685B5E;
             }
         }
     }
