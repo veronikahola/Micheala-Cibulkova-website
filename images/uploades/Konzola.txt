@@ -1,0 +1,4 @@
+[Log] <h1>Slalom</h1> (script.js, line 184)
+
+> document.querySelector('h1);
+< SyntaxError: Unexpected EOF
