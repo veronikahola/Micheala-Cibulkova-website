@@ -113,12 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add swipe event listeners
     hammer.on('swiperight', function () {
-        toggleCheckbox.checked = false;
+        toggleCheckbox.checked = true;
         handleToggleChange();
     });
 
     hammer.on('swipeleft', function () {
-        toggleCheckbox.checked = true;
+        toggleCheckbox.checked = false;
         handleToggleChange();
     });
 
