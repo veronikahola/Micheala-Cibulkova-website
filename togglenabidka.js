@@ -111,15 +111,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleContainer = document.querySelector('.toggle__container');
     const hammer = new Hammer(toggleContainer);
 
+    function initializeSlick() {
+        slickInstance = $('.carousel').slick({
+          slidesToShow: 1,
+          dots: true,
+          arrows: false,
+          adaptiveHeight: true,
+        });
+      }
+  
+      function destroySlick() {
+        $('.carousel').slick('unslick');
+      }
+      
     // Add swipe event listeners
     hammer.on('swiperight', function () {
         toggleCheckbox.checked = true;
         handleToggleChange();
+        destroySlick();
+      if (window.innerWidth <= 768) {
+        initializeSlick();
+      }
     });
 
     hammer.on('swipeleft', function () {
         toggleCheckbox.checked = false;
         handleToggleChange();
+        destroySlick();
+      if (window.innerWidth <= 768) {
+        initializeSlick();
+      }
     });
 
     // Add click event listeners for text labels

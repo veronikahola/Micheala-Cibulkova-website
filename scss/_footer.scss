@@ -19,7 +19,10 @@
         z-index: 1;
 
         @media screen and (max-width: 768px) {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            justify-items: center;
+            gap: var.$spacer-xs;
         }        
     }
 
@@ -34,6 +37,14 @@
         align-self: end;
         padding: 0 0 var.$spacer-xs 0;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 0;
+            justify-content: center;
+            gap: var.$spacer-xs;
+        } 
     }
 
     &__icon {
@@ -49,6 +60,12 @@
         & img {
             width: 100%;
         }
+
+        @media screen and (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 50%;
+        } 
         
     }
 
@@ -67,6 +84,14 @@
         align-self: end;
         padding: 0 0 var.$spacer-s 0;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            justify-self: center;
+            padding: 0 0 var.$spacer-s 0;
+            text-align: center;
+        } 
     }
 
     &__wave {
