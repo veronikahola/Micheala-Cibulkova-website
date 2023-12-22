@@ -107,6 +107,11 @@ p {
     font-size: 40px;
   }
 }
+@media screen and (min-width: 768px) {
+  .heading--resize {
+    font-size: 40px;
+  }
+}
 .heading--white {
   color: #F5F6F4;
 }
