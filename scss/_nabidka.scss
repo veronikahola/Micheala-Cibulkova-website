@@ -66,6 +66,8 @@
     } 
 
     &--svatby {
+        margin: var.$spacer-m 0;
+
         @media screen and (min-width: 768px){
             margin: var.$spacer-m var.$spacer-xs var.$spacer-l var.$spacer-xs;
         }

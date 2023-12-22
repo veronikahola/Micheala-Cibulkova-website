@@ -153,6 +153,10 @@ p {
     &--left {
         text-align: left;
     }
+
+    &--nabidka {
+        padding-top: var.$spacer-m;
+    }
 }
 
 

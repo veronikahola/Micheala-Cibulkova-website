@@ -138,6 +138,9 @@ p {
 .heading--left {
   text-align: left;
 }
+.heading--nabidka {
+  padding-top: 40px;
+}
 
 .wrapper {
   max-width: 800px;
@@ -1008,6 +1011,9 @@ button {
     margin-top: 44px;
     pointer-events: none;
   }
+}
+.slide--svatby {
+  margin: 40px 0;
 }
 @media screen and (min-width: 768px) {
   .slide--svatby {
