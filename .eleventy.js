@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("toggleportfolio.js");
   eleventyConfig.addPassthroughCopy("togglenabidka.js");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("slick");
 
   // Zkopírovat všechny *.js soubory na stejné umístění do _site
   // eleventyConfig.addPassthroughCopy("**/*.js");
