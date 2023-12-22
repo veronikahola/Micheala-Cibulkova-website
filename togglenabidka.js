@@ -3,8 +3,10 @@ $(document).ready(function(){
 
     function initializeSlick() {
       slickInstance = $('.carousel').slick({
-        slidesToShow: calculateSlidesToShow(),
-        
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true,
         // Add other configuration options as needed
       });
     }
@@ -13,31 +15,28 @@ $(document).ready(function(){
       $('.carousel').slick('unslick');
     }
 
-    function calculateSlidesToShow() {
-      // Implement your logic here to determine the appropriate number of slides
-      // For example, you can check the window width and return different values
-      if ($('#toggle').prop('checked') || window.innerWidth < 768) {
-        return 1;
-      } else {
-        return 3;
-      }
-    }
-
     // Initial setup
-    initializeSlick();
+    if (window.innerWidth <= 768) {
+      initializeSlick();
+    }
 
     // Toggle button change event
     $('#toggle').change(function() {
       destroySlick();
-      initializeSlick();
+      if (window.innerWidth <= 768) {
+        initializeSlick();
+      }
     });
 
     // Window resize event
     $(window).resize(function() {
       destroySlick();
-      initializeSlick();
+      if (window.innerWidth <= 768) {
+        initializeSlick();
+      }
     });
   });
+
 
 
 

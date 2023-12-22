@@ -998,38 +998,28 @@ button {
   margin: 80px auto;
 }
 
+@media screen and (min-width: 768px) {
+  .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 .slide {
   padding: 40px;
   background-color: #F5F6F4;
-  margin: 80px 12px 80px 12px;
+  margin: 40px 12px;
   border-radius: 10px;
   box-shadow: inset 0 0 3px #B3A8A8;
   text-align: justify;
 }
 @media screen and (min-width: 768px) {
-  .slide--center {
-    margin-top: 44px;
-    pointer-events: none;
-  }
-}
-.slide--svatby {
-  margin: 40px 0;
-}
-@media screen and (min-width: 768px) {
-  .slide--svatby {
-    margin: 40px 12px 80px 12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .slide--right {
-    margin-top: 60px;
-    pointer-events: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .siema {
-    pointer-events: none;
+  .slide {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 80px 0;
   }
 }
 

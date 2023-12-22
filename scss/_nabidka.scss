@@ -45,46 +45,28 @@
     }
 }
 
-
+.carousel {
+    @media screen and (min-width: 768px){
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: var.$spacer-s;
+    }
+}
 
 
 
 .slide {
     padding: var.$spacer-m;
     background-color: var.$color-white;
-    margin: var.$spacer-l var.$spacer-xs var.$spacer-l var.$spacer-xs;
+    margin: var.$spacer-m var.$spacer-xs;
     border-radius: 10px;
     box-shadow: inset 0 0 3px var.$color-light;
     text-align: justify;
-    
 
-    &--center {
-        @media screen and (min-width: 768px){
-            margin-top: var.$spacer-m + 4px;
-            pointer-events: none;
-        }
-    } 
-
-    &--svatby {
-        margin: var.$spacer-m 0;
-
-        @media screen and (min-width: 768px){
-            margin: var.$spacer-m var.$spacer-xs var.$spacer-l var.$spacer-xs;
-        }
-    }
-
-    &--right {
-        @media screen and (min-width: 768px){
-            margin-top: var.$spacer-m + 20px;
-            pointer-events: none;
-        }
-    }
-
-}
-
-.siema {
     @media screen and (min-width: 768px){
-        pointer-events: none;
+        height: fit-content;
+        margin: var.$spacer-l 0;
     }
 }
 
