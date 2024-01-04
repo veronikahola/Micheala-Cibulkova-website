@@ -155,4 +155,15 @@
     &__img {
         padding: var.$spacer-m 0;
     }
+
+    &__button {
+        color: var.$color-light;
+        text-decoration: none;
+        font-family: var.$font-heading;
+        font-size: var.$font-size-l;
+
+        &:hover {
+            color: var.$color-first;
+        }
+    }
 }

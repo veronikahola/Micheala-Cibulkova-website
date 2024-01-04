@@ -1285,4 +1285,13 @@ li {
 }
 .thankyou__img {
   padding: 40px 0;
+}
+.thankyou__button {
+  color: #B3A8A8;
+  text-decoration: none;
+  font-family: "Jomhuria", serif;
+  font-size: 40px;
+}
+.thankyou__button:hover {
+  color: #F6BE65;
 }/*# sourceMappingURL=style.css.map */
