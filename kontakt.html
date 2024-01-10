@@ -31,7 +31,7 @@ title: Kontakt
 
 <section class="kontakt--dark container">
 
-    <form name="mcibulkova" class="form" action="/formular/index.html" method="POST" data-netlify="true">
+    <form name="mcibulkova" class="form" data-netlify-recaptcha="true" action="/formular/index.html" method="POST" data-netlify="true">
         <h1 class="heading heading--unhidden"><span class="white">napište</span> <span class="pink">mi</span></h1>
 
         <div class="form__field--flex">
@@ -83,6 +83,8 @@ title: Kontakt
             <textarea class="form__input" name="zprava" id="zprava" cols="30" rows="10" placeholder=" "></textarea>
             <label class="form__label form__label--textarea" for="zprava">Zpráva</label>
         </div>
+
+        <div data-netlify-recaptcha="true"></div>
 
         <button class="button button--dark" type="submit">Odeslat</button>
     </form>
