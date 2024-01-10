@@ -610,15 +610,18 @@ p {
 }
 
 .footer {
-  padding: 0 0 20px 0;
+  padding: 0 0 40px 0;
   background: linear-gradient(to bottom, #78686C, #78686C, #625559);
   max-height: 30vh;
   margin-top: -7px;
 }
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 120px;
+    padding-bottom: 140px;
   }
+}
+.footer__vh:hover {
+  color: #F5F6F4;
 }
 .footer__content {
   display: grid;
@@ -664,6 +667,7 @@ p {
   grid-column: 2/3;
   grid-row: 1/2;
   width: 90%;
+  text-align: center;
 }
 .footer__img img {
   width: 100%;

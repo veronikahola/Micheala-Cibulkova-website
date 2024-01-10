@@ -5,15 +5,17 @@
 
 .footer {
     @media screen and (max-width: 768px) {
-        padding-bottom: 120px;
+        padding-bottom: 140px;
     }
-    
-    padding: 0 0 var.$spacer-s 0;
+
+    padding: 0 0 var.$spacer-m 0;
     background: linear-gradient(to bottom, #78686C, #78686C, #625559);
     max-height: 30vh;
     margin-top: -7px;
 
-    
+    &__vh:hover {
+        color: var.$color-white;
+    }
 
 
     &__content {
@@ -63,6 +65,7 @@
         grid-column: 2/3;
         grid-row: 1/2;
         width: 90%;
+        text-align: center;
 
         & img {
             width: 100%;
