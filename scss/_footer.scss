@@ -89,8 +89,9 @@
             grid-column: 1/2;
             grid-row: 3/4;
             justify-self: center;
-            padding: 0 0 var.$spacer-s 0;
             text-align: center;
+            margin-bottom: var.$spacer-m;
+            padding: var.$spacer-s 0 0 0;
         } 
     }
 
@@ -98,4 +99,8 @@
         filter: url(#shadow--footer);
         margin-top: var.$spacer-m;
     }
+}
+
+.recaptcha {
+    margin: 0 auto;
 }
