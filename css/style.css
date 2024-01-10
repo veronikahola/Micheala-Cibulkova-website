@@ -692,15 +692,12 @@ p {
     text-align: center;
     margin-bottom: 40px;
     padding: 20px 0 0 0;
+    background-color: #625559;
   }
 }
 .footer__wave {
   filter: url(#shadow--footer);
   margin-top: 40px;
-}
-
-.recaptcha {
-  margin: 0 auto;
 }
 
 .omne__wrapper {
@@ -1300,4 +1297,8 @@ li {
 }
 .thankyou__button:hover {
   color: #F6BE65;
+}
+
+.recaptcha {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
