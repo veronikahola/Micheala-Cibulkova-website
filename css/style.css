@@ -629,6 +629,7 @@ p {
     grid-template-rows: auto;
     justify-items: center;
     gap: 12px;
+    padding-bottom: 60px;
   }
 }
 .footer__icons {
@@ -692,7 +693,6 @@ p {
     text-align: center;
     margin-bottom: 40px;
     padding: 20px 0 0 0;
-    background-color: #625559;
   }
 }
 .footer__wave {

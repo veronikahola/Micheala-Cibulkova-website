@@ -23,6 +23,7 @@
             grid-template-rows: auto;
             justify-items: center;
             gap: var.$spacer-xs;
+            padding-bottom: 60px;
         }        
     }
 
@@ -92,7 +93,6 @@
             text-align: center;
             margin-bottom: var.$spacer-m;
             padding: var.$spacer-s 0 0 0;
-            background-color: #625559;
         } 
     }
 
