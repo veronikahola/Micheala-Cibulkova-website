@@ -615,7 +615,7 @@ p {
   max-height: 30vh;
   margin-top: -7px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .footer {
     padding-bottom: 120px;
   }

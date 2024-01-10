@@ -4,14 +4,16 @@
 
 
 .footer {
+    @media screen and (max-width: 768px) {
+        padding-bottom: 120px;
+    }
+    
     padding: 0 0 var.$spacer-s 0;
     background: linear-gradient(to bottom, #78686C, #78686C, #625559);
     max-height: 30vh;
     margin-top: -7px;
 
-    @media screen and (min-width: 768px) {
-        padding-bottom: 120px;
-    }
+    
 
 
     &__content {
