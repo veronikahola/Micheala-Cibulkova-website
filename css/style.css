@@ -614,7 +614,11 @@ p {
   background: linear-gradient(to bottom, #78686C, #78686C, #625559);
   max-height: 30vh;
   margin-top: -7px;
-  padding-bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-bottom: 120px;
+  }
 }
 .footer__content {
   display: grid;
